@@ -1808,6 +1808,136 @@ p { line-height: 1.7; }
 }
 
 /* ============================================================
+   BILDER — verkliga img-taggar i containers
+   ============================================================ */
+.hero__image img,
+.about-intro__image img,
+.sauna-feature__image img,
+.salon-card__image img,
+.page-hero__bg-img,
+.treatment-intro__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}
+
+.hero__image-placeholder,
+.about-intro__image-inner,
+.sauna-feature__image .icon {
+  display: none;
+}
+
+/* ── SVG Ikoner i behandlingskort ────────────────────────── */
+.treatment-card__icon {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, rgba(196,30,58,0.08), rgba(196,30,58,0.04));
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.treatment-card__icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: var(--red);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ── SVG Ikoner i USP ────────────────────────────────────── */
+.usp-item .usp-icon,
+.usp-card .usp-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.usp-item .usp-icon svg,
+.usp-card .usp-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--red);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ── Medarbetaravatar med initial ────────────────────────── */
+.staff-card__avatar {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--red);
+  background: linear-gradient(135deg, var(--beige), rgba(184,149,106,0.2));
+}
+
+/* ── Kontaktikoner (liten SVG) ───────────────────────────── */
+.contact-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ── Highlight sektion bakgrundsbild ─────────────────────── */
+.highlight {
+  background-image: url('https://picsum.photos/seed/cc-highlight/1600/900');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ── Salong-galleri bildcontainer ────────────────────────── */
+.salon-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  display: block;
+}
+
+/* ── Friskvård-lista utan emoji ──────────────────────────── */
+.friskvard-list li::before {
+  content: '';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: var(--red);
+  border-radius: 50%;
+  flex-shrink: 0;
+  /* SVG checkmark via mask */
+  -webkit-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 6L9 17l-5-5' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/12px no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 6L9 17l-5-5' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/12px no-repeat;
+  background-color: var(--red);
+}
+
+/* ── Prislista kategori-ikon ─────────────────────────────── */
+.prislista__category-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--red);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ============================================================
    STICKY MOBILE BOKA-BAR
    ============================================================ */
 .mobile-cta-bar {

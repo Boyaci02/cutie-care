@@ -5,62 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cutie Care – Proffs inom skönhet & massage | Stockholm</title>
   <meta name="description" content="Cutie Care – En del av Kina i Stockholm. Kinesisk och asiatisk skönhetssalong med 5 salonger i Stockholm. Massage, manikyr, pedikyr, spa och mer. Boka idag!" />
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Stilar -->
   <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Strukturerad data (LocalBusiness) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BeautySalon",
-    "name": "Cutie Care",
-    "description": "En del av Kina i Stockholm – kinesisk och asiatisk skönhetssalong med 5 salonger.",
-    "url": "https://cutiecare.se",
-    "telephone": "08-28 66 76",
-    "email": "info@cutiecare.se",
-    "foundingDate": "2012",
-    "sameAs": ["https://www.facebook.com/CutieCareSweden"]
-  }
+  {"@context":"https://schema.org","@type":"BeautySalon","name":"Cutie Care","description":"En del av Kina i Stockholm – kinesisk och asiatisk skönhetssalong med 5 salonger.","url":"https://cutiecare.se","telephone":"08-28 66 76","email":"info@cutiecare.se","foundingDate":"2012","sameAs":["https://www.facebook.com/CutieCareSweden"]}
   </script>
 </head>
 <body>
 
-<!-- ============================================================
-     1. NAVIGATION
-============================================================ -->
+<!-- ── NAVIGATION ─────────────────────────────────────────── -->
 <nav class="nav" id="main-nav" aria-label="Huvudnavigation">
   <div class="container">
     <div class="nav__inner">
-
-      <!-- Logo -->
       <a href="/" class="nav__logo" aria-label="Cutie Care – Startsida">
-        Cutie Care
-        <span>Skönhet &amp; Massage</span>
+        Cutie Care<span>Skönhet &amp; Massage</span>
       </a>
-
-      <!-- Desktop-links -->
       <ul class="nav__links" role="list">
         <li class="nav__item"><a href="/" class="nav__link">Hem</a></li>
         <li class="nav__item">
           <a href="#behandlingar" class="nav__link">Behandlingar ▾</a>
           <div class="nav__dropdown" role="menu">
-            <a href="behandlingar/manikyr.html" role="menuitem">💅 Manikyr</a>
-            <a href="behandlingar/pedikyr.html" role="menuitem">🦶 Pedikyr &amp; Fotvård</a>
-            <a href="behandlingar/massage.html" role="menuitem">🤲 Massage</a>
-            <a href="behandlingar/spa.html" role="menuitem">🌸 Spa</a>
-            <a href="behandlingar/ogonfransar.html" role="menuitem">👁 Ögonfransar &amp; Ögonbryn</a>
-            <a href="behandlingar/vaxning.html" role="menuitem">✨ Vaxning</a>
-            <a href="behandlingar/bastu.html" role="menuitem">🔥 Bastubehandling</a>
-            <a href="behandlingar/paket.html" role="menuitem">🎁 Paketbehandlingar</a>
+            <a href="behandlingar/manikyr.html" role="menuitem">Manikyr</a>
+            <a href="behandlingar/pedikyr.html" role="menuitem">Pedikyr &amp; Fotvård</a>
+            <a href="behandlingar/massage.html" role="menuitem">Massage</a>
+            <a href="behandlingar/spa.html" role="menuitem">Spa</a>
+            <a href="behandlingar/ogonfransar.html" role="menuitem">Ögonfransar &amp; Ögonbryn</a>
+            <a href="behandlingar/vaxning.html" role="menuitem">Vaxning</a>
+            <a href="behandlingar/bastu.html" role="menuitem">Bastubehandling</a>
+            <a href="behandlingar/paket.html" role="menuitem">Paketbehandlingar</a>
           </div>
         </li>
         <li class="nav__item">
@@ -77,24 +52,14 @@
         <li class="nav__item"><a href="prislista.html" class="nav__link">Prislista</a></li>
         <li class="nav__item"><a href="om-oss.html" class="nav__link">Om Oss</a></li>
       </ul>
-
-      <!-- CTA knapp -->
-      <a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary nav__cta" target="_blank" rel="noopener">
-        Boka Tid
-      </a>
-
-      <!-- Hamburger -->
+      <a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary nav__cta" target="_blank" rel="noopener">Boka Tid</a>
       <button class="nav__hamburger" id="hamburger" aria-label="Öppna meny" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
-
     </div>
   </div>
 </nav>
 
-<!-- Mobilmeny -->
 <div class="nav__mobile" id="mobile-menu" role="dialog" aria-label="Mobilmeny">
   <a href="/">Hem</a>
   <a href="#behandlingar">Behandlingar</a>
@@ -106,54 +71,37 @@
 </div>
 
 
-<!-- ============================================================
-     2. HERO
-============================================================ -->
+<!-- ── HERO ───────────────────────────────────────────────── -->
 <section class="hero" id="hero" aria-label="Välkomstsektion">
   <div class="container">
     <div class="hero__inner">
 
-      <!-- Vänster: Text -->
       <div class="hero__content">
         <span class="hero__label">Cutie Care — Skönhet &amp; Massage</span>
-
         <h1 class="hero__title fade-in">
           Vårda <em>Din</em> Kropp,<br>Lyft <em>Din</em> Själ
         </h1>
-
         <p class="hero__subtitle fade-in fade-in-delay-1">
           Skapa lugna stunder där kropp, sinne och din inre frid möts — i hjärtat av en äkta kinesisk spa-upplevelse.
         </p>
-
         <div class="hero__actions fade-in fade-in-delay-2">
-          <a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
-            Boka Behandling
-          </a>
-          <a href="#behandlingar" class="btn btn-outline btn-lg">
-            Utforska Behandlingar
-          </a>
+          <a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Boka Behandling</a>
+          <a href="#behandlingar" class="btn btn-outline btn-lg">Utforska Behandlingar</a>
         </div>
-
         <div class="hero__badges fade-in fade-in-delay-3">
-          <span class="hero__badge">✨ 5 Salonger i Stockholm</span>
-          <span class="hero__badge">⭐ 4.8 Betyg på Google</span>
+          <span class="hero__badge">5 Salonger i Stockholm</span>
+          <span class="hero__badge">4.8 Betyg på Google</span>
         </div>
       </div>
 
-      <!-- Höger: Bild -->
       <div class="hero__image-wrap fade-in fade-in-delay-2">
         <div class="hero__image">
-          <!-- Byt ut mot riktig bild: <img src="images/hero-spa.jpg" alt="Avslappnande spa-behandling på Cutie Care"> -->
-          <div class="hero__image-placeholder">
-            <span class="icon">🌸</span>
-            <span>Spa-behandling</span>
-            <span style="font-size:0.65rem;opacity:0.6">Lägg till bild: images/hero-spa.jpg</span>
-          </div>
+          <img src="https://picsum.photos/seed/cc-hero/600/750" alt="Avslappnande spa-behandling på Cutie Care" loading="eager" />
         </div>
-
-        <!-- Dekorativ info-badge -->
         <div class="hero__image-badge">
-          <span class="badge-icon">🏆</span>
+          <span class="badge-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </span>
           <div class="badge-text">
             <strong>10+ Års Erfarenhet</strong>
             <span>Utbildade terapeuter</span>
@@ -164,19 +112,14 @@
     </div>
   </div>
 
-  <!-- Scroll-indikator -->
   <div class="hero__scroll" aria-hidden="true">
     <span>Scroll</span>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M12 5v14M5 12l7 7 7-7"/>
-    </svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
   </div>
 </section>
 
 
-<!-- ============================================================
-     3. FRISKVÅRD PARTNER-BANNER
-============================================================ -->
+<!-- ── FRISKVÅRD PARTNER-BANNER ────────────────────────────── -->
 <section class="partners-banner" aria-label="Friskvårdspartners">
   <div class="container">
     <p class="partners-banner__label">Använd din friskvård hos oss</p>
@@ -191,65 +134,52 @@
 </section>
 
 
-<!-- ============================================================
-     4. OM OSS INTRO
-============================================================ -->
+<!-- ── OM OSS INTRO ────────────────────────────────────────── -->
 <section class="about-intro" aria-labelledby="about-heading">
   <div class="container">
     <div class="about-intro__grid">
 
-      <!-- Bild -->
       <div class="about-intro__image fade-in">
-        <!-- Byt ut mot riktig bild: <img src="images/salong-interior.jpg" alt="Cutie Care – kinesisk inspirerad inredning"> -->
-        <div class="about-intro__image-inner">
-          <span class="icon">🏮</span>
-          <span>Salongsinteriör</span>
-          <span style="font-size:0.65rem;opacity:0.5">Lägg till bild: images/salong-interior.jpg</span>
-        </div>
+        <img src="https://picsum.photos/seed/cc-salon/700/875" alt="Cutie Care – kinesisk inspirerad salongsinteriör" loading="lazy" />
         <div class="about-intro__year-badge">
-          2012
-          <span>Sedan</span>
+          2012<span>Sedan</span>
         </div>
       </div>
 
-      <!-- Text -->
       <div class="about-intro__content fade-in fade-in-delay-1">
         <span class="section-label">Om Cutie Care</span>
         <h2 id="about-heading">En del av <em>Kina</em> i Stockholm</h2>
-        <p>
-          Vi bringer Asiens rika tradition av omvårdnad och välmående till Stockholm. Med kinesisk och asiatisk
-          inspirerad inredning, lugnande musik och äkta kinesiskt te skapar vi en atmosfär av lugn och harmoni
-          — långt borta från vardagens stress.
-        </p>
+        <p>Vi bringer Asiens rika tradition av omvårdnad och välmående till Stockholm. Med kinesisk och asiatisk inspirerad inredning, lugnande musik och äkta kinesiskt te skapar vi en atmosfär av lugn och harmoni.</p>
 
         <div class="about-intro__usps" role="list">
           <div class="usp-item fade-in fade-in-delay-1" role="listitem">
-            <div class="usp-icon">🤲</div>
+            <div class="usp-icon">
+              <svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 00-4 0M14 10V4a2 2 0 00-4 0v2M10 10.5V6a2 2 0 00-4 0v8a6 6 0 006 6h2a6 6 0 006-6v-2a2 2 0 00-4 0"/></svg>
+            </div>
             <p>Handgjorda behandlingar</p>
           </div>
           <div class="usp-item fade-in fade-in-delay-2" role="listitem">
-            <div class="usp-icon">🌿</div>
+            <div class="usp-icon">
+              <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19.44a2 2 0 01-3.43-.19C.99 17.54.44 14.56 1 12 2.5 5.5 8 2 17 2c0 6-4 10-10 10"/></svg>
+            </div>
             <p>Naturliga produkter</p>
           </div>
           <div class="usp-item fade-in fade-in-delay-3" role="listitem">
-            <div class="usp-icon">⭐</div>
+            <div class="usp-icon">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
             <p>10+ års erfarenhet</p>
           </div>
         </div>
 
-        <a href="om-oss.html" class="about-intro__link">
-          Läs mer om oss →
-        </a>
+        <a href="om-oss.html" class="about-intro__link">Läs mer om oss →</a>
       </div>
-
     </div>
   </div>
 </section>
 
 
-<!-- ============================================================
-     5. BEHANDLINGSKORT
-============================================================ -->
+<!-- ── BEHANDLINGSKORT ─────────────────────────────────────── -->
 <section class="treatments" id="behandlingar" aria-labelledby="treatments-heading">
   <div class="container">
 
@@ -262,56 +192,72 @@
     <div class="treatments__grid">
 
       <article class="treatment-card fade-in fade-in-delay-1">
-        <div class="treatment-card__icon">💅</div>
+        <div class="treatment-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4.5 8-11.8C20 5.8 16.4 2 12 2S4 5.8 4 10.2C4 17.5 12 22 12 22z"/><path d="M12 8v4M10 10h4"/></svg>
+        </div>
         <h3>Manikyr</h3>
         <p>Handgjord nagelbehandling av kinesiska specialister. Gellack, géleförlängning, franskt och mer.</p>
         <a href="behandlingar/manikyr.html" class="treatment-card__link">Läs mer &amp; Boka →</a>
       </article>
 
       <article class="treatment-card fade-in fade-in-delay-2">
-        <div class="treatment-card__icon">🦶</div>
+        <div class="treatment-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8 8 6 12 6 15a6 6 0 0012 0c0-3-2-7-6-13z"/><path d="M9.5 16.5c.5.5 1.5 1 2.5 1s2-.5 2.5-1"/></svg>
+        </div>
         <h3>Pedikyr &amp; Fotvård</h3>
         <p>Dina fötter förtjänar extra omvårdnad. Djuprengöring, nagelvård och avkopplande fotmassage.</p>
         <a href="behandlingar/pedikyr.html" class="treatment-card__link">Läs mer &amp; Boka →</a>
       </article>
 
       <article class="treatment-card fade-in fade-in-delay-3">
-        <div class="treatment-card__icon">🤲</div>
+        <div class="treatment-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 00-4 0M14 10V4a2 2 0 00-4 0v2M10 10.5V6a2 2 0 00-4 0v8a6 6 0 006 6h2a6 6 0 006-6v-2a2 2 0 00-4 0"/></svg>
+        </div>
         <h3>Massage</h3>
         <p>10+ massagetyper av erfarna terapeuter. Kinesisk TuiNa, Thai, Hotstone, Svensk och mer.</p>
         <a href="behandlingar/massage.html" class="treatment-card__link">Läs mer &amp; Boka →</a>
       </article>
 
       <article class="treatment-card fade-in fade-in-delay-4">
-        <div class="treatment-card__icon">🌸</div>
+        <div class="treatment-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22c0-5-3-8-3-8s3-.5 3-4c0 3.5 3 4 3 4s-3 3-3 8z"/><path d="M12 22C8 17 3 16 3 16s3-2 3-6c0 3.5 3 5 6 6s6-2.5 6-6c0 4 3 6 3 6s-5 1-9 6z"/></svg>
+        </div>
         <h3>Spa</h3>
         <p>Traditionell asiatisk omvårdnad och avslappning. Body scrub, ansiktsbehandling och aromaterapi.</p>
         <a href="behandlingar/spa.html" class="treatment-card__link">Läs mer &amp; Boka →</a>
       </article>
 
       <article class="treatment-card fade-in fade-in-delay-1">
-        <div class="treatment-card__icon">👁</div>
+        <div class="treatment-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
         <h3>Ögonfransar &amp; Ögonbryn</h3>
         <p>Professionell inramning för dina ögon. Fransförlängning, lyftning, färgning och formning.</p>
         <a href="behandlingar/ogonfransar.html" class="treatment-card__link">Läs mer &amp; Boka →</a>
       </article>
 
       <article class="treatment-card fade-in fade-in-delay-2">
-        <div class="treatment-card__icon">✨</div>
+        <div class="treatment-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3v2M12 19v2M5.22 5.22l1.42 1.42M16.36 16.36l1.42 1.42M3 12h2M19 12h2M5.22 18.78l1.42-1.42M16.36 7.64l1.42-1.42"/><circle cx="12" cy="12" r="4"/></svg>
+        </div>
         <h3>Vaxning</h3>
         <p>Professionell vaxning för slät och fin hud. Ben, armhålor, ansikte, bikini och mer.</p>
         <a href="behandlingar/vaxning.html" class="treatment-card__link">Läs mer &amp; Boka →</a>
       </article>
 
       <article class="treatment-card fade-in fade-in-delay-3">
-        <div class="treatment-card__icon">🔥</div>
+        <div class="treatment-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3C9 7 10 5 12 3c.5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg>
+        </div>
         <h3>Bastubehandling</h3>
         <p>Infraröd bastu och avslappnande massage. Rena toxiner, förbättra cirkulationen och slappna av.</p>
         <a href="behandlingar/bastu.html" class="treatment-card__link">Läs mer &amp; Boka →</a>
       </article>
 
       <article class="treatment-card fade-in fade-in-delay-4">
-        <div class="treatment-card__icon">🎁</div>
+        <div class="treatment-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M20 12v10H4V12M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+        </div>
         <h3>Paketbehandlingar</h3>
         <p>Kombinera behandlingar till bättre pris. Skräddarsy din spa-dag med flera behandlingar.</p>
         <a href="behandlingar/paket.html" class="treatment-card__link">Läs mer &amp; Boka →</a>
@@ -322,26 +268,20 @@
 </section>
 
 
-<!-- ============================================================
-     6. PARALLAX HIGHLIGHT
-============================================================ -->
+<!-- ── PARALLAX HIGHLIGHT ──────────────────────────────────── -->
 <section class="highlight" aria-label="Upplevelsesektion">
   <div class="container">
     <div class="highlight__inner">
       <span class="section-label section-label--light">Asiatisk Omvårdnad</span>
       <h2 class="fade-in">Upplev <em>Äkta</em> Avslappning</h2>
       <p class="fade-in fade-in-delay-1">Bli bortskämd av terapeuter med genuin asiatisk erfarenhet. Varje behandling är unik — precis som du.</p>
-      <a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-lg fade-in fade-in-delay-2" target="_blank" rel="noopener">
-        Boka Din Behandling
-      </a>
+      <a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-lg fade-in fade-in-delay-2" target="_blank" rel="noopener">Boka Din Behandling</a>
     </div>
   </div>
 </section>
 
 
-<!-- ============================================================
-     7. PRISER MED FLIKAR
-============================================================ -->
+<!-- ── PRISER MED FLIKAR ───────────────────────────────────── -->
 <section class="pricing" aria-labelledby="pricing-heading">
   <div class="container">
 
@@ -350,7 +290,6 @@
       <h2 id="pricing-heading">Populära <em>Behandlingar</em></h2>
     </div>
 
-    <!-- Flikar -->
     <div class="pricing__tabs" role="tablist" aria-label="Behandlingskategorier">
       <button class="tab-btn active" data-tab="alla" role="tab" aria-selected="true">Alla</button>
       <button class="tab-btn" data-tab="massage" role="tab" aria-selected="false">Massage</button>
@@ -360,17 +299,9 @@
       <button class="tab-btn" data-tab="vaxning" role="tab" aria-selected="false">Vaxning</button>
     </div>
 
-    <!-- Alla -->
     <div class="pricing__table active" id="tab-alla" role="tabpanel">
       <table class="price-table">
-        <thead>
-          <tr>
-            <th>Behandling</th>
-            <th>Tid</th>
-            <th>Pris</th>
-            <th></th>
-          </tr>
-        </thead>
+        <thead><tr><th>Behandling</th><th>Tid</th><th>Pris</th><th></th></tr></thead>
         <tbody>
           <tr><td>Klassisk Svensk Massage</td><td>55 min</td><td>995 kr</td><td><a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-sm boka-btn" target="_blank">Boka</a></td></tr>
           <tr><td>Klassisk Manikyr + nagellack</td><td>30 min</td><td>435 kr</td><td><a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-sm boka-btn" target="_blank">Boka</a></td></tr>
@@ -384,7 +315,6 @@
       </table>
     </div>
 
-    <!-- Massage -->
     <div class="pricing__table" id="tab-massage" role="tabpanel">
       <table class="price-table">
         <thead><tr><th>Behandling</th><th>Tid</th><th>Pris</th><th></th></tr></thead>
@@ -401,13 +331,12 @@
       </table>
     </div>
 
-    <!-- Manikyr -->
     <div class="pricing__table" id="tab-manikyr" role="tabpanel">
       <table class="price-table">
         <thead><tr><th>Behandling</th><th>Tid</th><th>Pris</th><th></th></tr></thead>
         <tbody>
-          <tr><td>Klassisk Manikyr + nagellack</td><td>30 min</td><td>435 kr</td><td><a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-sm boka-btn" target="_blank">Boka</a></td></tr>
           <tr><td>Klassisk Manikyr, utan nagellack</td><td>30 min</td><td>415 kr</td><td><a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-sm boka-btn" target="_blank">Boka</a></td></tr>
+          <tr><td>Klassisk Manikyr + nagellack</td><td>30 min</td><td>435 kr</td><td><a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-sm boka-btn" target="_blank">Boka</a></td></tr>
           <tr><td>Manikyr Gellack – inkl. borttagning</td><td>60 min</td><td>695 kr</td><td><a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-sm boka-btn" target="_blank">Boka</a></td></tr>
           <tr><td>Manikyr – Fransk</td><td>60 min</td><td>715 kr</td><td><a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-sm boka-btn" target="_blank">Boka</a></td></tr>
           <tr><td>Géle Förlängning</td><td>60 min</td><td>895 kr</td><td><a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-sm boka-btn" target="_blank">Boka</a></td></tr>
@@ -416,7 +345,6 @@
       </table>
     </div>
 
-    <!-- Pedikyr -->
     <div class="pricing__table" id="tab-pedikyr" role="tabpanel">
       <table class="price-table">
         <thead><tr><th>Behandling</th><th>Tid</th><th>Pris</th><th></th></tr></thead>
@@ -431,7 +359,6 @@
       </table>
     </div>
 
-    <!-- Spa -->
     <div class="pricing__table" id="tab-spa" role="tabpanel">
       <table class="price-table">
         <thead><tr><th>Behandling</th><th>Tid</th><th>Pris</th><th></th></tr></thead>
@@ -446,7 +373,6 @@
       </table>
     </div>
 
-    <!-- Vaxning -->
     <div class="pricing__table" id="tab-vaxning" role="tabpanel">
       <table class="price-table">
         <thead><tr><th>Behandling</th><th>Tid</th><th>Pris</th><th></th></tr></thead>
@@ -457,7 +383,6 @@
           <tr><td>Halva ben</td><td>30 min</td><td>495 kr</td><td><a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-sm boka-btn" target="_blank">Boka</a></td></tr>
           <tr><td>Hela benen</td><td>30 min</td><td>695 kr</td><td><a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-sm boka-btn" target="_blank">Boka</a></td></tr>
           <tr><td>Brasiliansk</td><td>30 min</td><td>695 kr</td><td><a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-sm boka-btn" target="_blank">Boka</a></td></tr>
-          <tr><td>Bikinilinje</td><td>30 min</td><td>595 kr</td><td><a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-sm boka-btn" target="_blank">Boka</a></td></tr>
         </tbody>
       </table>
     </div>
@@ -465,28 +390,19 @@
     <div class="pricing__more fade-in">
       <a href="prislista.html">Se alla priser →</a>
     </div>
-
   </div>
 </section>
 
 
-<!-- ============================================================
-     8. INFRARÖD BASTU FEATURE
-============================================================ -->
+<!-- ── INFRARÖD BASTU ──────────────────────────────────────── -->
 <section class="sauna-feature" aria-labelledby="sauna-heading">
   <div class="container">
     <div class="sauna-feature__grid">
 
-      <!-- Text -->
       <div class="sauna-feature__content fade-in">
         <span class="section-label section-label--gold">Nyhet</span>
-        <h2 id="sauna-heading">Infraröd <em style="color:var(--gold)">Bastu</em></h2>
-        <p>
-          Upplev den infraröda bastuns unika fördelar. Den infraröda värmen tränger djupare in i kroppen
-          än traditionell bastu, vilket hjälper till att rena toxiner, minska muskelvärk,
-          förbättra cirkulationen och ge djup avslappning.
-        </p>
-
+        <h2 id="sauna-heading">Infraröd <span style="color:var(--gold)">Bastu</span></h2>
+        <p>Den infraröda värmen tränger djupare in i kroppen än traditionell bastu och hjälper till att rena toxiner, minska muskelvärk och ge djup avslappning.</p>
         <div class="sauna-prices">
           <div class="sauna-price-item">
             <span class="price-label">Per gång — 30 min</span>
@@ -497,22 +413,12 @@
             <span class="price-value">3 550 kr</span>
           </div>
         </div>
-
-        <a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary" target="_blank" rel="noopener">
-          Boka Bastu
-        </a>
-
-        <p class="sauna-feature__note">
-          📍 Endast på Cutie Spa Nacka Forum
-        </p>
+        <a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary" target="_blank" rel="noopener">Boka Bastu</a>
+        <p class="sauna-feature__note">Endast på Cutie Spa Nacka Forum</p>
       </div>
 
-      <!-- Bild -->
       <div class="sauna-feature__image fade-in fade-in-delay-2">
-        <!-- Byt ut mot riktig bild: <img src="images/bastu.jpg" alt="Infraröd bastu på Cutie Spa Nacka Forum"> -->
-        <span class="icon">🔥</span>
-        <span style="font-size:0.75rem">Infraröd Bastu</span>
-        <span style="font-size:0.65rem;opacity:0.5">Lägg till bild: images/bastu.jpg</span>
+        <img src="https://picsum.photos/seed/cc-sauna/600/750" alt="Infraröd bastu på Cutie Spa Nacka Forum" loading="lazy" />
       </div>
 
     </div>
@@ -520,9 +426,7 @@
 </section>
 
 
-<!-- ============================================================
-     9. VÅRA SALONGER
-============================================================ -->
+<!-- ── VÅRA SALONGER ───────────────────────────────────────── -->
 <section class="salons" id="salonger" aria-labelledby="salons-heading">
   <div class="container">
 
@@ -534,51 +438,61 @@
     <div class="salons__grid">
 
       <article class="salon-card fade-in fade-in-delay-1">
-        <div class="salon-card__image" aria-hidden="true">🏬</div>
+        <div class="salon-card__image">
+          <img src="https://picsum.photos/seed/cc-s1/400/300" alt="Cutie Spa Mall of Scandinavia" loading="lazy" />
+        </div>
         <div class="salon-card__body">
           <h3 class="salon-card__name">Cutie Spa<br>Mall of Scandinavia</h3>
-          <p class="salon-card__address">📍 Plan 2, Solna</p>
-          <p class="salon-card__phone">📞 08-28 66 76 #2</p>
+          <p class="salon-card__address">Plan 2, Solna</p>
+          <p class="salon-card__phone">08-28 66 76 #2</p>
           <a href="salonger/mall-of-scandinavia.html" class="salon-card__link">Se Salong →</a>
         </div>
       </article>
 
       <article class="salon-card fade-in fade-in-delay-2">
-        <div class="salon-card__image" aria-hidden="true">💅</div>
+        <div class="salon-card__image">
+          <img src="https://picsum.photos/seed/cc-s2/400/300" alt="Cutie Nails Saltsjöbaden" loading="lazy" />
+        </div>
         <div class="salon-card__body">
           <h3 class="salon-card__name">Cutie Nails<br>Saltsjöbaden</h3>
-          <p class="salon-card__address">📍 Torggatan 8</p>
-          <p class="salon-card__phone">📞 08-28 66 76 #3</p>
+          <p class="salon-card__address">Torggatan 8</p>
+          <p class="salon-card__phone">08-28 66 76 #3</p>
           <a href="salonger/saltsjobaden.html" class="salon-card__link">Se Salong →</a>
         </div>
       </article>
 
       <article class="salon-card fade-in fade-in-delay-3">
-        <div class="salon-card__image" aria-hidden="true">🌸</div>
+        <div class="salon-card__image">
+          <img src="https://picsum.photos/seed/cc-s3/400/300" alt="Blissful Danderyd" loading="lazy" />
+        </div>
         <div class="salon-card__body">
           <h3 class="salon-card__name">Blissful<br>Danderyd</h3>
-          <p class="salon-card__address">📍 Danderyd Centrum</p>
-          <p class="salon-card__phone">📞 08-28 66 76 #4</p>
+          <p class="salon-card__address">Danderyd Centrum</p>
+          <p class="salon-card__phone">08-28 66 76 #4</p>
           <a href="salonger/danderyd.html" class="salon-card__link">Se Salong →</a>
         </div>
       </article>
 
       <article class="salon-card fade-in fade-in-delay-4">
-        <div class="salon-card__image" aria-hidden="true">🏮</div>
+        <div class="salon-card__image">
+          <img src="https://picsum.photos/seed/cc-s4/400/300" alt="Cutie Spa Täby" loading="lazy" />
+        </div>
         <div class="salon-card__body">
           <h3 class="salon-card__name">Cutie Spa<br>Täby</h3>
-          <p class="salon-card__address">📍 Stora Marknadsvägen 15</p>
-          <p class="salon-card__phone">📞 08-28 66 76 #5</p>
+          <p class="salon-card__address">Stora Marknadsvägen 15</p>
+          <p class="salon-card__phone">08-28 66 76 #5</p>
           <a href="salonger/taby.html" class="salon-card__link">Se Salong →</a>
         </div>
       </article>
 
       <article class="salon-card fade-in fade-in-delay-1">
-        <div class="salon-card__image" aria-hidden="true">♨️</div>
+        <div class="salon-card__image">
+          <img src="https://picsum.photos/seed/cc-s5/400/300" alt="Cutie Spa Nacka Forum" loading="lazy" />
+        </div>
         <div class="salon-card__body">
           <h3 class="salon-card__name">Cutie Spa<br>Nacka Forum</h3>
-          <p class="salon-card__address">📍 Forumvägen 2</p>
-          <p class="salon-card__phone">📞 08-28 66 76 #6</p>
+          <p class="salon-card__address">Forumvägen 2</p>
+          <p class="salon-card__phone">08-28 66 76 #6</p>
           <a href="salonger/nacka-forum.html" class="salon-card__link">Se Salong →</a>
         </div>
       </article>
@@ -588,36 +502,27 @@
 </section>
 
 
-<!-- ============================================================
-     10. FRISKVÅRD
-============================================================ -->
+<!-- ── FRISKVÅRD ───────────────────────────────────────────── -->
 <section class="friskvard-section" aria-labelledby="friskvard-heading">
   <div class="container">
     <div class="friskvard-section__grid">
 
-      <!-- Text -->
       <div class="fade-in">
         <span class="section-label">Friskvård</span>
         <h2 id="friskvard-heading">Förläng Din <em>Friskvård</em></h2>
-        <p>
-          Använd ditt friskvårdsbidrag hos oss — gäller för massage och fotvård upp till 1 000 kr per tillfälle.
-          Köp ett friskvårdskort och förläng giltighetstiden med 1 år.
-        </p>
-
+        <p>Använd ditt friskvårdsbidrag hos oss — gäller för massage och fotvård upp till 1 000 kr per tillfälle.</p>
         <ul class="friskvard-list" role="list">
           <li>Massage &amp; fotvård av proffs</li>
           <li>Gäller alla 5 salonger</li>
           <li>Max 1 000 kr per tillfälle</li>
           <li>Köp online eller i salong</li>
         </ul>
-
         <div class="friskvard-section__actions">
           <a href="https://shop.cutiecare.se/product/friskvard/" class="btn btn-primary" target="_blank" rel="noopener">Köp Friskvårdskort</a>
           <a href="friskvard.html" class="btn btn-outline-red">Se Behandlingar</a>
         </div>
       </div>
 
-      <!-- Partners -->
       <div class="fade-in fade-in-delay-2">
         <div class="partner-badges">
           <div class="partner-badge">Benifex</div>
@@ -625,7 +530,7 @@
           <div class="partner-badge">Wellnet</div>
           <div class="partner-badge">Söderberg &amp; Partners</div>
           <div class="partner-badge">Edenred</div>
-          <div class="partner-badge" style="background:var(--red);color:var(--white)">Friskvård ✓</div>
+          <div class="partner-badge" style="background:var(--red);color:var(--white)">Friskvård godkänt</div>
         </div>
       </div>
 
@@ -634,24 +539,20 @@
 </section>
 
 
-<!-- ============================================================
-     11. PRESENTKORT CTA-BANNER
-============================================================ -->
+<!-- ── PRESENTKORT BANNER ──────────────────────────────────── -->
 <section class="gift-banner" aria-labelledby="gift-heading">
   <div class="container">
-    <div class="gift-banner__icon" aria-hidden="true">🎁</div>
+    <div style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;background:rgba(255,255,255,0.15);border-radius:50%;margin-bottom:20px">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+    </div>
     <h2 id="gift-heading">Ge bort avslappning — Cutie Care <em>Presentkort</em></h2>
     <p>Gäller i alla våra salonger och i webbutiken. Det perfekta presenten till alla tillfällen.</p>
-    <a href="https://shop.cutiecare.se/product/presentkort/" class="btn btn-white btn-lg" target="_blank" rel="noopener">
-      Köp Presentkort
-    </a>
+    <a href="https://shop.cutiecare.se/product/presentkort/" class="btn btn-white btn-lg" target="_blank" rel="noopener">Köp Presentkort</a>
   </div>
 </section>
 
 
-<!-- ============================================================
-     12. FAQ
-============================================================ -->
+<!-- ── FAQ ─────────────────────────────────────────────────── -->
 <section class="faq" aria-labelledby="faq-heading">
   <div class="container">
 
@@ -667,9 +568,7 @@
           <span>Hur bokar jag en behandling?</span>
           <span class="faq__icon" aria-hidden="true">+</span>
         </div>
-        <div class="faq__answer">
-          <p>Gå till cutiecare.se/boka → Välj salong → Välj behandling och tid. Du kan också ringa oss på 08-28 66 76. Vi erbjuder bokning via BokaDirekt dygnet runt.</p>
-        </div>
+        <div class="faq__answer"><p>Gå till cutiecare.se/boka → Välj salong → Välj behandling och tid. Du kan också ringa oss på 08-28 66 76. Vi erbjuder bokning via BokaDirekt dygnet runt.</p></div>
       </div>
 
       <div class="faq__item" role="listitem">
@@ -677,9 +576,7 @@
           <span>Var kan jag köpa presentkort?</span>
           <span class="faq__icon" aria-hidden="true">+</span>
         </div>
-        <div class="faq__answer">
-          <p>Online på shop.cutiecare.se eller i alla salonger. Presentkortet gäller i alla salonger och i webbshopen — det perfekta presenten!</p>
-        </div>
+        <div class="faq__answer"><p>Online på shop.cutiecare.se eller i alla salonger. Presentkortet gäller i alla salonger och i webbshopen.</p></div>
       </div>
 
       <div class="faq__item" role="listitem">
@@ -687,9 +584,7 @@
           <span>Vad är skillnaden mellan kinesisk och thailändsk massage?</span>
           <span class="faq__icon" aria-hidden="true">+</span>
         </div>
-        <div class="faq__answer">
-          <p>Kinesisk massage (TuiNa) fokuserar på akupunkturpunkter och förbättrar cirkulationen. Thailändsk massage arbetar med leder och inkluderar drag- och sträckmoment längs hela kroppen.</p>
-        </div>
+        <div class="faq__answer"><p>Kinesisk massage (TuiNa) fokuserar på akupunkturpunkter och förbättrar cirkulationen. Thailändsk massage arbetar med leder och inkluderar drag- och sträckmoment längs hela kroppen.</p></div>
       </div>
 
       <div class="faq__item" role="listitem">
@@ -697,19 +592,7 @@
           <span>Vad skiljer fotvård från pedikyr?</span>
           <span class="faq__icon" aria-hidden="true">+</span>
         </div>
-        <div class="faq__answer">
-          <p>Pedikyr inkluderar rengöring, slipning och nagelmålning utan specialverktyg. Fotvård är mer ingående med djuprengöring av huden och specialverktyg för att ta bort förhårdnad och torr hud.</p>
-        </div>
-      </div>
-
-      <div class="faq__item" role="listitem">
-        <div class="faq__question" role="button" tabindex="0" aria-expanded="false">
-          <span>Vad ingår i en full pedikyr 60 min?</span>
-          <span class="faq__icon" aria-hidden="true">+</span>
-        </div>
-        <div class="faq__answer">
-          <p>En fullständig nagelbehandling inklusive undersidan av fötterna. Vi tar bort död hud, formar naglarna och avslutar med valfritt lack.</p>
-        </div>
+        <div class="faq__answer"><p>Pedikyr inkluderar rengöring, slipning och nagelmålning utan specialverktyg. Fotvård är mer ingående med djuprengöring och specialverktyg för att ta bort förhårdnad.</p></div>
       </div>
 
       <div class="faq__item" role="listitem">
@@ -717,9 +600,7 @@
           <span>Skillnad nagellack och gellack?</span>
           <span class="faq__icon" aria-hidden="true">+</span>
         </div>
-        <div class="faq__answer">
-          <p>Nagellack håller max 1 vecka och torkar på ca 10 minuter. Gellack håller 3–4 veckor, torkar direkt under UV-lampa och ger ett mer hållbart och glansigt resultat.</p>
-        </div>
+        <div class="faq__answer"><p>Nagellack håller max 1 vecka och torkar på ca 10 minuter. Gellack håller 3–4 veckor, torkar direkt under UV-lampa och ger ett mer hållbart och glansigt resultat.</p></div>
       </div>
 
       <div class="faq__item" role="listitem">
@@ -727,9 +608,15 @@
           <span>Vilka betalningssätt erbjuder ni?</span>
           <span class="faq__icon" aria-hidden="true">+</span>
         </div>
-        <div class="faq__answer">
-          <p>Vi accepterar Visa, Mastercard, American Express och Swish. Vi tar inte emot kontanter.</p>
+        <div class="faq__answer"><p>Vi accepterar Visa, Mastercard, American Express och Swish. Vi tar inte emot kontanter.</p></div>
+      </div>
+
+      <div class="faq__item" role="listitem">
+        <div class="faq__question" role="button" tabindex="0" aria-expanded="false">
+          <span>Vilka friskvårdspartners accepterar ni?</span>
+          <span class="faq__icon" aria-hidden="true">+</span>
         </div>
+        <div class="faq__answer"><p>Vi accepterar Benifex, Epassi, Wellnet, Söderberg &amp; Partners och Edenred. Friskvård gäller för massage och fotvård, max 1 000 kr per tillfälle.</p></div>
       </div>
 
       <div class="faq__item" role="listitem">
@@ -737,9 +624,7 @@
           <span>Var finns prislistan?</span>
           <span class="faq__icon" aria-hidden="true">+</span>
         </div>
-        <div class="faq__answer">
-          <p>Vår fullständiga prislista finns på <a href="prislista.html" style="color:var(--red);font-weight:600">cutiecare.se/prislista</a>. Vi reserverar oss mot eventuella fel i prislistan.</p>
-        </div>
+        <div class="faq__answer"><p>Vår fullständiga prislista finns på <a href="prislista.html" style="color:var(--red);font-weight:600">prislista-sidan</a>. Vi reserverar oss mot eventuella fel.</p></div>
       </div>
 
     </div>
@@ -747,9 +632,7 @@
 </section>
 
 
-<!-- ============================================================
-     13. TESTIMONIAL / CITAT
-============================================================ -->
+<!-- ── TESTIMONIAL ─────────────────────────────────────────── -->
 <section class="testimonial" aria-label="Citat från Cutie Care">
   <div class="container">
     <span class="testimonial__quote-mark" aria-hidden="true">"</span>
@@ -761,40 +644,30 @@
 </section>
 
 
-<!-- ============================================================
-     14. WEBBSHOP TEASER
-============================================================ -->
+<!-- ── WEBBSHOP TEASER ────────────────────────────────────── -->
 <section class="shop-teaser" aria-labelledby="shop-heading">
   <div class="container">
     <div class="shop-teaser__grid">
 
-      <!-- Text -->
       <div class="fade-in">
         <span class="section-label">Vår Webbshop</span>
         <h2 id="shop-heading">Professionella produkter för <em>Hemmabruk</em></h2>
-        <p>Handla samma produkter som vi använder i våra salonger. Argan-olja, fotkräm, handkräm och mer — levererat hem till dig.</p>
-        <a href="https://shop.cutiecare.se" class="btn btn-primary" target="_blank" rel="noopener">
-          Besök Webbshopen →
-        </a>
+        <p>Handla samma produkter som vi använder i våra salonger. Levererat hem till dig.</p>
+        <a href="https://shop.cutiecare.se" class="btn btn-primary" target="_blank" rel="noopener">Besök Webbshopen →</a>
       </div>
 
-      <!-- Produkter -->
       <div class="shop-teaser__products fade-in fade-in-delay-2">
         <div class="product-card">
-          <span class="product-icon">🌿</span>
-          <span class="product-name">Argan Olja</span>
+          <img src="https://picsum.photos/seed/cc-p1/200/200" alt="Argan Olja" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md)" />
         </div>
         <div class="product-card">
-          <span class="product-icon">🧴</span>
-          <span class="product-name">Fotkräm</span>
+          <img src="https://picsum.photos/seed/cc-p2/200/200" alt="Fotkräm" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md)" />
         </div>
         <div class="product-card">
-          <span class="product-icon">💆</span>
-          <span class="product-name">Massage Olja</span>
+          <img src="https://picsum.photos/seed/cc-p3/200/200" alt="Massage Olja" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md)" />
         </div>
         <div class="product-card">
-          <span class="product-icon">✋</span>
-          <span class="product-name">Handkräm</span>
+          <img src="https://picsum.photos/seed/cc-p4/200/200" alt="Handkräm" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md)" />
         </div>
       </div>
 
@@ -803,23 +676,19 @@
 </section>
 
 
-<!-- ============================================================
-     15. AVSLUTANDE BOKA CTA
-============================================================ -->
+<!-- ── BOKA CTA ────────────────────────────────────────────── -->
 <section class="cta-section" aria-labelledby="cta-heading">
   <div class="container">
     <h2 id="cta-heading" class="fade-in">Redo att <em>Boka</em> Din Behandling?</h2>
     <p class="fade-in fade-in-delay-1">Välj salong och tid — vi tar hand om resten.</p>
-    <a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-lg fade-in fade-in-delay-2" target="_blank" rel="noopener">
-      Boka Nu
-    </a>
+    <a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary btn-lg fade-in fade-in-delay-2" target="_blank" rel="noopener">Boka Nu</a>
     <div class="cta-section__contact fade-in fade-in-delay-3">
       <a href="tel:08286676">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.08 10.8 19.79 19.79 0 01.01 2.2 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <svg class="contact-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.08 10.8 19.79 19.79 0 01.01 2.2 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         08-28 66 76
       </a>
       <a href="mailto:info@cutiecare.se">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <svg class="contact-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         info@cutiecare.se
       </a>
     </div>
@@ -827,28 +696,21 @@
 </section>
 
 
-<!-- ============================================================
-     16. FOOTER
-============================================================ -->
+<!-- ── FOOTER ──────────────────────────────────────────────── -->
 <footer class="footer" role="contentinfo">
   <div class="container">
     <div class="footer__grid">
 
-      <!-- Kolumn 1: Om -->
       <div class="footer__col">
-        <div class="footer__logo">
-          Cutie Care
-          <span>Skönhet &amp; Massage</span>
-        </div>
+        <div class="footer__logo">Cutie Care<span>Skönhet &amp; Massage</span></div>
         <p>En del av Kina i Stockholm.<br>Skönhet &amp; massage sedan 2012.</p>
         <div class="footer__social">
           <a href="https://www.facebook.com/CutieCareSweden" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
           </a>
         </div>
       </div>
 
-      <!-- Kolumn 2: Behandlingar -->
       <div class="footer__col">
         <h4 class="footer__col-title">Behandlingar</h4>
         <nav class="footer__links" aria-label="Behandlingar">
@@ -863,7 +725,6 @@
         </nav>
       </div>
 
-      <!-- Kolumn 3: Salonger -->
       <div class="footer__col">
         <h4 class="footer__col-title">Våra Salonger</h4>
         <nav class="footer__links" aria-label="Salonger">
@@ -875,19 +736,18 @@
         </nav>
       </div>
 
-      <!-- Kolumn 4: Kontakt & Snabblänkar -->
       <div class="footer__col">
         <h4 class="footer__col-title">Kontakt</h4>
         <div class="footer__contact-item">
-          <span>📞</span>
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.08 10.8 19.79 19.79 0 01.01 2.2 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           <a href="tel:08286676" style="color:inherit">08-28 66 76</a>
         </div>
         <div class="footer__contact-item">
-          <span>✉️</span>
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           <a href="mailto:info@cutiecare.se" style="color:inherit">info@cutiecare.se</a>
         </div>
         <div class="footer__contact-item" style="margin-bottom:20px">
-          <span>💳</span>
+          <svg class="contact-icon" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
           <span>Visa, MC, Amex, Swish</span>
         </div>
         <h4 class="footer__col-title">Snabblänkar</h4>
@@ -902,38 +762,19 @@
 
     </div>
 
-    <!-- Footer botten -->
     <div class="footer__bottom">
       <span>© 2025 Cutie Care. Alla rättigheter reserverade.</span>
       <a href="/integritetspolicy.html">Integritetspolicy</a>
     </div>
-
   </div>
 </footer>
 
-
-<!-- Sticky mobile boka-bar -->
 <div class="mobile-cta-bar" aria-hidden="true">
-  <a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary" target="_blank" rel="noopener">
-    Boka Nu — Välj Tid &amp; Salong
-  </a>
+  <a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn-primary" target="_blank" rel="noopener">Boka Nu — Välj Tid &amp; Salong</a>
 </div>
 
-
-<!-- JavaScript -->
 <script src="js/main.js"></script>
-
-<!-- Facebook Pixel -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','603933431208553');
-fbq('track','PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=603933431208553&ev=PageView&noscript=1"/></noscript>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','603933431208553');fbq('track','PageView');</script>
 
 </body>
 </html>
