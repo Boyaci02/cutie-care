@@ -1,0 +1,135 @@
+/* ============================================================
+   CUTIE CARE — Design Tokens
+   Källa till sanning för färg, typografi, spacing, motion.
+   ============================================================ */
+
+:root {
+  /* ── COLOR ─────────────────────────────────────────────── */
+  --color-red:        #C41E3A;
+  --color-red-dark:   #8B1525;
+  --color-red-soft:   rgba(196, 30, 58, 0.08);
+  --color-red-glow:   rgba(196, 30, 58, 0.22);
+
+  --color-cream:      #FAFAF7;
+  --color-beige:      #F5EDE3;
+  --color-border:     #E8DED6;
+
+  --color-dark:       #3D2B1F;
+  --color-dark-deep:  #2A1C14;
+  --color-near-black: #1A1A1A;
+
+  --color-gold:       #B8956A;
+  --color-gold-soft:  rgba(184, 149, 106, 0.18);
+  --color-gold-line:  rgba(184, 149, 106, 0.35);
+
+  --color-warm-gray:  #8A7E78;
+  --color-white:      #FFFFFF;
+
+  /* Bakåtkompatibla aliases (subsidor refererar dessa inline) */
+  --red:        var(--color-red);
+  --red-dark:   var(--color-red-dark);
+  --red-light:  var(--color-red-soft);
+  --cream:      var(--color-cream);
+  --beige:      var(--color-beige);
+  --dark:       var(--color-dark);
+  --dark-deep:  var(--color-dark-deep);
+  --off-white:  var(--color-cream);
+  --near-black: var(--color-near-black);
+  --gold:       var(--color-gold);
+  --warm-gray:  var(--color-warm-gray);
+  --border:     var(--color-border);
+  --white:      var(--color-white);
+
+  /* ── TYPOGRAPHY ───────────────────────────────────────── */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --fs-display: clamp(2.75rem, 6vw + 1rem, 5rem);
+  --fs-h1:      clamp(2.25rem, 4.5vw + 0.5rem, 4rem);
+  --fs-h2:      clamp(1.75rem, 3vw + 0.5rem, 3rem);
+  --fs-h3:      clamp(1.375rem, 1.5vw + 0.5rem, 1.875rem);
+  --fs-h4:      clamp(1.125rem, 0.75vw + 0.875rem, 1.375rem);
+  --fs-lead:    clamp(1.0625rem, 0.5vw + 0.875rem, 1.25rem);
+  --fs-body:    clamp(1rem, 0.25vw + 0.95rem, 1.0625rem);
+  --fs-small:   0.875rem;
+  --fs-eyebrow: 0.75rem;
+
+  --lh-tight: 1.05;
+  --lh-snug:  1.18;
+  --lh-body:  1.65;
+  --lh-loose: 1.85;
+
+  --ls-tight:  -0.01em;
+  --ls-normal: 0;
+  --ls-wide:   0.04em;
+  --ls-eyebrow: 0.18em;
+
+  /* ── SPACING (8-baserad) ─────────────────────────────── */
+  --sp-1: 8px;
+  --sp-2: 16px;
+  --sp-3: 24px;
+  --sp-4: 32px;
+  --sp-5: 40px;
+  --sp-6: 64px;
+  --sp-7: 96px;
+  --sp-8: 128px;
+  --sp-9: 160px;
+
+  --section-padding: clamp(64px, 10vw, 160px);
+
+  /* ── RADIUS ──────────────────────────────────────────── */
+  --radius-sm:   8px;
+  --radius-md:   16px;
+  --radius-lg:   24px;
+  --radius-xl:   32px;
+  --radius-pill: 999px;
+
+  /* ── SHADOW ──────────────────────────────────────────── */
+  --shadow-xs: 0 1px 2px rgba(26, 26, 26, 0.04);
+  --shadow-sm: 0 2px 8px rgba(26, 26, 26, 0.06);
+  --shadow-md: 0 8px 24px rgba(26, 26, 26, 0.08);
+  --shadow-lg: 0 16px 48px rgba(26, 26, 26, 0.10);
+  --shadow-xl: 0 28px 80px rgba(26, 26, 26, 0.18);
+  --shadow-glow-red: 0 12px 36px rgba(196, 30, 58, 0.22);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  /* ── MOTION ──────────────────────────────────────────── */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --dur-fast:   180ms;
+  --dur-base:   280ms;
+  --dur-slow:   520ms;
+  --dur-reveal: 820ms;
+
+  --transition: var(--dur-base) var(--ease-smooth);
+
+  /* ── LAYER ────────────────────────────────────────────── */
+  --z-nav:        1000;
+  --z-mobile-cta:  900;
+  --z-mobile-nav: 1100;
+  --z-lightbox:  9999;
+
+  /* ── DECORATIVE ──────────────────────────────────────── */
+  /* Kinesisk lattice/cross pattern (data-URI SVG, ~ 40x40 tile) */
+  --pattern-lattice: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'><g fill='none' stroke='%23B8956A' stroke-width='0.6' stroke-opacity='0.6'><path d='M0 20h40M20 0v40M5 5l30 30M35 5L5 35'/></g></svg>");
+}
+
+/* ── REDUCED MOTION ────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast:   0ms;
+    --dur-base:   0ms;
+    --dur-slow:   0ms;
+    --dur-reveal: 0ms;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

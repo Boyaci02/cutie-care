@@ -1,0 +1,85 @@
+{
+  "_note": "Curated Unsplash photo IDs used by index.html. URL pattern: https://images.unsplash.com/photo-{id}?w={size}&q=80&fm=webp&fit=crop&auto=format. All verified 2026-04-27.",
+  "hero": {
+    "id": "1540555700478-4be289fbecef",
+    "alt": "Avslappnande spa-stenar i varmt ljus",
+    "use": "Hero — section 2"
+  },
+  "about_interior": {
+    "id": "1610375461246-83df859d849d",
+    "alt": "Kinesisk te-rumsinredning med varma toner",
+    "use": "About-intro — section 4"
+  },
+  "treatment_massage": {
+    "id": "1544161515-4ab6ce6db874",
+    "alt": "Massage med varma toner och oljor",
+    "use": "Bento large — Massage"
+  },
+  "treatment_manikyr": {
+    "id": "1610992015732-2449b76344bc",
+    "alt": "Detaljbild av manikyr",
+    "use": "Bento — Manikyr"
+  },
+  "treatment_pedikyr": {
+    "id": "1519415943484-9fa1873496d4",
+    "alt": "Pedikyr i lugn miljö",
+    "use": "Bento — Pedikyr"
+  },
+  "treatment_spa": {
+    "id": "1570172619644-dfd03ed5d881",
+    "alt": "Ansiktsbehandling i spa-miljö",
+    "use": "Bento — Spa"
+  },
+  "treatment_bastu": {
+    "id": "1571902943202-507ec2618e8f",
+    "alt": "Cedarträ-bastu i varmt ljus",
+    "use": "Bento large — Infraröd Bastu, infrared-section media"
+  },
+  "treatment_ogonfransar": {
+    "id": "1632345031435-8727f6897d53",
+    "alt": "Ögonfransbehandling närbild",
+    "use": "Bento — Fransar"
+  },
+  "treatment_vaxning": {
+    "id": "1607779097040-26e80aa78e66",
+    "alt": "Vaxningsbehandling",
+    "use": "Bento — Vaxning"
+  },
+  "treatment_paket": {
+    "id": "1600334129128-685c5582fd35",
+    "alt": "Spa-produkter och paket",
+    "use": "Bento — Paket; Salons — Mall of Scandinavia"
+  },
+  "parallax": {
+    "id": "1571019613454-1cb2f99b2d8b",
+    "alt": "Massagebord i varmt ljus",
+    "use": "Parallax highlight — section 6"
+  },
+  "salon_taby": {
+    "id": "1583416750470-965b2707b355",
+    "alt": "Cutie Spa Täby interiör",
+    "use": "Salons — Täby"
+  },
+  "salon_saltsjobaden": {
+    "id": "1591343395082-e120087004b4",
+    "alt": "Cutie Nails Saltsjöbaden interiör",
+    "use": "Salons — Saltsjöbaden"
+  },
+  "shop_argan": {
+    "id": "1556228720-195a672e8a03",
+    "alt": "Argan-olja flaska",
+    "use": "Webshop bento — Argan"
+  },
+  "shop_foot_cream": {
+    "id": "1556228852-80b6e5eeff06",
+    "alt": "Fotkräm",
+    "use": "Webshop bento — Fotkräm"
+  },
+  "shop_hand_cream": {
+    "id": "1556228578-8c89e6adf883",
+    "alt": "Handkräm",
+    "use": "Webshop bento — Handkräm"
+  },
+  "_credits": "All images by Unsplash photographers — free for commercial and non-commercial use under the Unsplash License. Future migration: download to /img/ and serve locally for full ownership.",
+  "_replacement_strategy": "If any photo ID returns 404, swap with: 1611080626919-7cf5a9dbab5b, 1556228852-80b6e5eeff06, 1620916566398-39f1143ab7be, 1573497019418-b400bb3ab074, 1571781926291-c477ebfd024b — all verified working 2026-04-27."
+}

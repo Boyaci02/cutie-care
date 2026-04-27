@@ -1,19 +1,20 @@
 /* ============================================================
    CUTIE CARE — JavaScript
+   Sticky nav, hamburger, reveal/fade-in, tabs, FAQ, partner-acc,
+   smooth scroll, lightbox, sticky-CTA, hero parallax-tilt.
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ── 1. STICKY NAV ──────────────────────────────────────── */
   const nav = document.getElementById('main-nav');
 
   if (nav) {
     const onScroll = () => {
-      if (window.scrollY > 60) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
+      if (window.scrollY > 60) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
@@ -24,56 +25,73 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.getElementById('mobile-menu');
 
   if (hamburger && mobileMenu) {
+    const closeMenu = () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    };
+
+    const openMenu = () => {
+      mobileMenu.classList.add('open');
+      hamburger.classList.add('active');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    };
+
     hamburger.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburger.classList.toggle('active', isOpen);
-      hamburger.setAttribute('aria-expanded', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      if (mobileMenu.classList.contains('open')) closeMenu();
+      else openMenu();
     });
 
-    // Stäng vid klick på länk
     mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        hamburger.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeMenu);
     });
 
-    // Stäng vid klick utanför
     document.addEventListener('click', (e) => {
       if (mobileMenu.classList.contains('open') &&
           !mobileMenu.contains(e.target) &&
           !hamburger.contains(e.target)) {
-        mobileMenu.classList.remove('open');
-        hamburger.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+        closeMenu();
       }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu();
     });
   }
 
-  /* ── 3. SCROLL-ANIMATIONER (fade-in) ────────────────────── */
-  const fadeEls = document.querySelectorAll('.fade-in');
+  /* ── 3. REVEAL + FADE-IN (IntersectionObserver) ─────────── */
+  const animatedEls = document.querySelectorAll('.reveal, .fade-in');
 
-  if (fadeEls.length > 0 && 'IntersectionObserver' in window) {
+  if (animatedEls.length > 0 && 'IntersectionObserver' in window && !prefersReducedMotion) {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+          entry.target.classList.add('is-in', 'visible');
+
+          // Stagger på children — sätt --i automatiskt om reveal--stagger
+          if (entry.target.classList.contains('reveal--stagger')) {
+            Array.from(entry.target.children).forEach((child, idx) => {
+              if (!child.style.getPropertyValue('--i')) {
+                child.style.setProperty('--i', idx);
+              }
+              child.classList.add('is-in', 'visible');
+            });
+          }
+
           observer.unobserve(entry.target);
         }
       });
     }, {
       threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
+      rootMargin: '0px 0px -60px 0px',
     });
 
-    fadeEls.forEach(el => observer.observe(el));
+    animatedEls.forEach(el => observer.observe(el));
   } else {
-    // Fallback för äldre webbläsare
-    fadeEls.forEach(el => el.classList.add('visible'));
+    // Fallback / reduced-motion: visa direkt
+    animatedEls.forEach(el => el.classList.add('is-in', 'visible'));
   }
 
   /* ── 4. PRISFLIKAR ──────────────────────────────────────── */
@@ -85,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', () => {
         const targetTab = btn.dataset.tab;
 
-        // Uppdatera knappar
         tabBtns.forEach(b => {
           b.classList.remove('active');
           b.setAttribute('aria-selected', 'false');
@@ -93,14 +110,35 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.classList.add('active');
         btn.setAttribute('aria-selected', 'true');
 
-        // Uppdatera tabeller
         pricingTables.forEach(table => {
           table.classList.remove('active');
+          table.setAttribute('hidden', '');
         });
         const target = document.getElementById('tab-' + targetTab);
-        if (target) target.classList.add('active');
+        if (target) {
+          target.classList.add('active');
+          target.removeAttribute('hidden');
+        }
       });
     });
+
+    // Keyboard arrow navigation
+    const tabsContainer = document.querySelector('.tabs');
+    if (tabsContainer) {
+      tabsContainer.addEventListener('keydown', (e) => {
+        const buttons = Array.from(tabsContainer.querySelectorAll('.tab-btn'));
+        const currentIdx = buttons.findIndex(b => b === document.activeElement);
+        if (currentIdx === -1) return;
+
+        if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          buttons[(currentIdx + 1) % buttons.length].focus();
+        } else if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          buttons[(currentIdx - 1 + buttons.length) % buttons.length].focus();
+        }
+      });
+    }
   }
 
   /* ── 5. FAQ ACCORDION ───────────────────────────────────── */
@@ -113,7 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggle = () => {
       const isOpen = item.classList.contains('open');
 
-      // Stäng alla andra
       faqItems.forEach(other => {
         if (other !== item) {
           other.classList.remove('open');
@@ -122,14 +159,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // Toggla aktuell
       item.classList.toggle('open', !isOpen);
-      question.setAttribute('aria-expanded', !isOpen);
+      question.setAttribute('aria-expanded', String(!isOpen));
     };
 
     question.addEventListener('click', toggle);
 
-    // Tangentbordsnavigation
     question.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -156,13 +191,13 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const href = anchor.getAttribute('href');
-      if (href === '#') return;
+      if (href === '#' || href === '#main') return;
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
         const navHeight = nav ? nav.offsetHeight : 80;
         const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 20;
-        window.scrollTo({ top, behavior: 'smooth' });
+        window.scrollTo({ top, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
       }
     });
   });
@@ -171,15 +206,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const galleryItems = document.querySelectorAll('.salon-gallery__item[data-src]');
 
   if (galleryItems.length > 0) {
-    // Skapa lightbox-element
     const lightbox = document.createElement('div');
     lightbox.style.cssText = `
       display:none;position:fixed;inset:0;z-index:9999;
-      background:rgba(0,0,0,0.9);align-items:center;justify-content:center;
-      cursor:pointer;
+      background:rgba(0,0,0,0.92);align-items:center;justify-content:center;
+      cursor:pointer;backdrop-filter:blur(8px);
     `;
     const lbImg = document.createElement('img');
-    lbImg.style.cssText = 'max-width:90vw;max-height:90vh;border-radius:12px;object-fit:contain;';
+    lbImg.style.cssText = 'max-width:90vw;max-height:90vh;border-radius:12px;object-fit:contain;box-shadow:0 24px 80px rgba(0,0,0,0.5);';
     lightbox.appendChild(lbImg);
     document.body.appendChild(lightbox);
 
@@ -193,19 +227,85 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    lightbox.addEventListener('click', () => {
+    const closeLb = () => {
       lightbox.style.display = 'none';
       document.body.style.overflow = '';
+    };
+
+    lightbox.addEventListener('click', closeLb);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.style.display === 'flex') closeLb();
     });
   }
 
   /* ── 9. AKTIV NAV-LÄNK ──────────────────────────────────── */
-  const currentPath = window.location.pathname;
+  const currentPath = window.location.pathname.replace(/\/$/, '');
   document.querySelectorAll('.nav__link').forEach(link => {
     const href = link.getAttribute('href');
-    if (href && currentPath.endsWith(href.replace('./', ''))) {
-      link.style.color = 'var(--red)';
+    if (!href || href.startsWith('#') || href.startsWith('http')) return;
+    const linkPath = href.replace('./', '').replace(/\/$/, '');
+    if (currentPath.endsWith(linkPath) && linkPath !== '') {
+      link.classList.add('is-active');
     }
   });
+
+  /* ── 10. STICKY MOBILE CTA ───────────────────────────────── */
+  const stickyCTA = document.getElementById('sticky-cta');
+
+  if (stickyCTA) {
+    let lastShown = false;
+    const onScrollSticky = () => {
+      const shouldShow = window.scrollY > 600 && window.innerWidth < 768;
+      if (shouldShow !== lastShown) {
+        stickyCTA.classList.toggle('visible', shouldShow);
+        stickyCTA.setAttribute('aria-hidden', String(!shouldShow));
+        lastShown = shouldShow;
+      }
+    };
+    window.addEventListener('scroll', onScrollSticky, { passive: true });
+    window.addEventListener('resize', onScrollSticky, { passive: true });
+    onScrollSticky();
+  }
+
+  /* ── 11. HERO PARALLAX-TILT (mouse-move) ────────────────── */
+  const heroMedia = document.querySelector('.hero__media');
+
+  if (heroMedia && !prefersReducedMotion && window.matchMedia('(min-width: 1024px) and (hover: hover)').matches) {
+    const imgWrap = heroMedia.querySelector('.hero__media__img-wrap');
+    if (imgWrap) {
+      let rafId = null;
+      let targetX = 0, targetY = 0, currentX = 0, currentY = 0;
+
+      const onMove = (e) => {
+        const rect = heroMedia.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        const dx = (e.clientX - cx) / rect.width;
+        const dy = (e.clientY - cy) / rect.height;
+        targetX = dx * 4;  // max 4deg
+        targetY = -dy * 4;
+        if (!rafId) rafId = requestAnimationFrame(animate);
+      };
+
+      const animate = () => {
+        currentX += (targetX - currentX) * 0.08;
+        currentY += (targetY - currentY) * 0.08;
+        imgWrap.style.transform = `perspective(1200px) rotateY(${currentX}deg) rotateX(${currentY}deg)`;
+        if (Math.abs(targetX - currentX) > 0.05 || Math.abs(targetY - currentY) > 0.05) {
+          rafId = requestAnimationFrame(animate);
+        } else {
+          rafId = null;
+        }
+      };
+
+      const onLeave = () => {
+        targetX = 0; targetY = 0;
+        if (!rafId) rafId = requestAnimationFrame(animate);
+      };
+
+      window.addEventListener('mousemove', onMove, { passive: true });
+      window.addEventListener('mouseleave', onLeave);
+    }
+  }
 
 });
