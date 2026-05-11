@@ -267,7 +267,28 @@ document.addEventListener('DOMContentLoaded', () => {
     onScrollSticky();
   }
 
-  /* ── 11. HERO PARALLAX-TILT (mouse-move) ────────────────── */
+  /* ── 11. COOKIE BANNER ───────────────────────────────────── */
+  const cookieBanner = document.getElementById('cookie-banner');
+
+  if (cookieBanner && !localStorage.getItem('cc_cookies')) {
+    setTimeout(() => cookieBanner.classList.add('visible'), 1200);
+
+    cookieBanner.querySelector('[data-cookie-accept]')?.addEventListener('click', () => {
+      localStorage.setItem('cc_cookies', 'accepted');
+      cookieBanner.classList.remove('visible');
+      setTimeout(() => cookieBanner.remove(), 400);
+    });
+
+    cookieBanner.querySelector('[data-cookie-decline]')?.addEventListener('click', () => {
+      localStorage.setItem('cc_cookies', 'declined');
+      cookieBanner.classList.remove('visible');
+      setTimeout(() => cookieBanner.remove(), 400);
+    });
+  } else if (cookieBanner) {
+    cookieBanner.remove();
+  }
+
+  /* ── 12. HERO PARALLAX-TILT (mouse-move) ────────────────── */
   const heroMedia = document.querySelector('.hero__media');
 
   if (heroMedia && !prefersReducedMotion && window.matchMedia('(min-width: 1024px) and (hover: hover)').matches) {

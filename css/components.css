@@ -753,3 +753,109 @@
 @media (prefers-reduced-motion: reduce) {
   .scroll-indicator { animation: none; }
 }
+
+/* ── COOKIE BANNER ────────────────────────────────────────── */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 9998;
+  max-width: 420px;
+  width: calc(100% - 48px);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
+  padding: 24px;
+  transform: translateY(120%);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+  font-family: var(--font-sans);
+}
+
+.cookie-banner.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.cookie-banner__icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-red);
+  margin-bottom: 8px;
+}
+
+.cookie-banner__text {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-dark);
+  margin-bottom: 16px;
+}
+
+.cookie-banner__text a {
+  color: var(--color-red);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cookie-banner__actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cookie-banner__btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.cookie-banner__btn:active {
+  transform: scale(0.97);
+}
+
+.cookie-banner__btn--accept {
+  background: var(--color-red);
+  color: var(--color-white);
+}
+
+.cookie-banner__btn--accept:hover {
+  background: var(--color-red-dark);
+}
+
+.cookie-banner__btn--decline {
+  background: transparent;
+  color: var(--color-dark);
+  border: 1px solid var(--color-border);
+}
+
+.cookie-banner__btn--decline:hover {
+  background: var(--color-beige);
+}
+
+@media (max-width: 480px) {
+  .cookie-banner {
+    bottom: 12px;
+    left: 12px;
+    width: calc(100% - 24px);
+    padding: 20px;
+  }
+  .cookie-banner__actions {
+    flex-direction: column;
+  }
+  .cookie-banner__btn {
+    width: 100%;
+    text-align: center;
+  }
+}
