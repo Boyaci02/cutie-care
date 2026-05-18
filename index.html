@@ -336,17 +336,20 @@
   @media (max-width: 768px) {
     .hero-promo {
       justify-content: center;
-      align-items: flex-end;
+      align-items: flex-start;
     }
     .hero-promo__bg {
-      object-position: 25% center;
+      object-position: center bottom;
     }
     .hero-promo__content {
       text-align: center;
-      padding: 60px 20px 100px;
+      padding: 100px 24px 24px;
       margin-right: 0;
       max-width: 100%;
-      background: linear-gradient(0deg, rgba(245,240,235,.95) 60%, rgba(245,240,235,.6) 85%, transparent 100%);
+      background: none;
+    }
+    .hero-promo__title {
+      font-size: clamp(2rem, 7vw, 3rem);
     }
     .hero-promo__price { justify-content: center; }
     .hero-promo__pills { justify-content: center; }
