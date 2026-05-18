@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Hero image preload (LCP) -->
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=80&fm=webp&fit=crop&auto=format" fetchpriority="high" />
+  <link rel="preload" as="image" href="img/hero.jpg" fetchpriority="high" />
 
   <!-- Stylesheets — split for clarity, parallel HTTP/2 download -->
   <link rel="stylesheet" href="css/tokens.css" />
@@ -28,7 +28,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Cutie Care – Skönhet & massage i Stockholm" />
   <meta property="og:description" content="En del av Kina i Stockholm. Kinesisk omvårdnad, naturliga produkter, 5 salonger sedan 2012." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=80&fm=jpg&fit=crop&auto=format" />
+  <meta property="og:image" content="img/hero.jpg" />
   <meta property="og:url" content="https://cutiecare.se" />
   <meta property="og:locale" content="sv_SE" />
 
@@ -165,12 +165,8 @@
       <div class="hero__media reveal reveal--left">
         <div class="hero__media__img-wrap">
           <img
-            src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=900&q=80&fm=webp&fit=crop&auto=format"
-            srcset="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80&fm=webp&fit=crop&auto=format 600w,
-                    https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=900&q=80&fm=webp&fit=crop&auto=format 900w,
-                    https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=80&fm=webp&fit=crop&auto=format 1200w"
-            sizes="(max-width: 900px) 90vw, 40vw"
-            alt="Avslappnande spa-stenar i varmt ljus"
+            src="img/hero.jpg"
+            alt="CutieSPA entre med neonskyltar"
             fetchpriority="high"
             decoding="async"
           />
@@ -234,11 +230,8 @@
 
       <div class="about-intro__media reveal reveal--right">
         <img
-          src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=900&q=80&fm=webp&fit=crop&auto=format"
-          srcset="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=600&q=80&fm=webp&fit=crop&auto=format 600w,
-                  https://images.unsplash.com/photo-1610375461246-83df859d849d?w=900&q=80&fm=webp&fit=crop&auto=format 900w"
-          sizes="(max-width: 900px) 90vw, 40vw"
-          alt="Kinesisk te-rumsinredning med varma toner"
+          src="img/about-interior.jpg"
+          alt="Cutie Spa reception med marmordisk"
           loading="lazy"
           decoding="async"
           class="about-intro__media__img"
@@ -313,7 +306,7 @@
     <div class="treatments-bento__grid reveal reveal--stagger">
 
       <a href="behandlingar/massage.html" class="tile tile--lg" style="--i:0">
-        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=80&fm=webp&fit=crop&auto=format" alt="Massage med varma toner och oljor" loading="lazy" decoding="async" />
+        <img src="img/massage.jpg" alt="Hot stone massage pa Cutie Spa" loading="lazy" decoding="async" />
         <div class="tile__body">
           <h3 class="tile__title">Massage</h3>
           <p class="tile__desc">10+ massagetyper av terapeuter med genuin asiatisk erfarenhet.</p>
@@ -322,7 +315,7 @@
       </a>
 
       <a href="behandlingar/manikyr.html" class="tile tile--md" style="--i:1">
-        <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=800&q=80&fm=webp&fit=crop&auto=format" alt="Detaljbild av manikyr" loading="lazy" decoding="async" />
+        <img src="img/manikyr.jpg" alt="Pedikyr och nagelvard pa Cutie Spa" loading="lazy" decoding="async" />
         <div class="tile__body">
           <h3 class="tile__title">Manikyr</h3>
           <span class="tile__price">Från 415 kr</span>
@@ -330,7 +323,7 @@
       </a>
 
       <a href="behandlingar/pedikyr.html" class="tile tile--md" style="--i:2">
-        <img src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?w=800&q=80&fm=webp&fit=crop&auto=format" alt="Pedikyr i lugn miljö" loading="lazy" decoding="async" />
+        <img src="img/pedikyr.jpg" alt="Pedikyr med nagellack pa Cutie Spa" loading="lazy" decoding="async" />
         <div class="tile__body">
           <h3 class="tile__title">Pedikyr</h3>
           <span class="tile__price">Från 595 kr</span>
@@ -338,7 +331,7 @@
       </a>
 
       <a href="behandlingar/spa.html" class="tile tile--md" style="--i:3">
-        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80&fm=webp&fit=crop&auto=format" alt="Ansiktsbehandling i spa-miljö" loading="lazy" decoding="async" />
+        <img src="img/spa.jpg" alt="Ansiktsbehandling pa Cutie Spa" loading="lazy" decoding="async" />
         <div class="tile__body">
           <h3 class="tile__title">Spa &amp; Ansikte</h3>
           <span class="tile__price">Från 615 kr</span>
@@ -347,7 +340,7 @@
 
       <a href="behandlingar/bastu.html" class="tile tile--lg" style="--i:4">
         <span class="tile__tag tag tag--gold">✦ Nyhet</span>
-        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1200&q=80&fm=webp&fit=crop&auto=format" alt="Cedarträ-bastu i varmt ljus" loading="lazy" decoding="async" />
+        <img src="img/bastu.jpg" alt="Infrarod bastu Luxway pa Cutie Spa" loading="lazy" decoding="async" />
         <div class="tile__body">
           <h3 class="tile__title">Infraröd Bastu</h3>
           <p class="tile__desc">30 min infraröd värme — endast på Cutie Spa Nacka Forum.</p>
@@ -372,7 +365,7 @@
       </a>
 
       <a href="behandlingar/paket.html" class="tile tile--md" style="--i:7">
-        <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80&fm=webp&fit=crop&auto=format" alt="Spa-produkter och paket" loading="lazy" decoding="async" />
+        <img src="img/hot-stone.jpg" alt="Hot stone massage paket" loading="lazy" decoding="async" />
         <div class="tile__body">
           <h3 class="tile__title">Paket</h3>
           <span class="tile__price">Från 1 040 kr</span>
@@ -390,7 +383,7 @@
 <section class="parallax-highlight" aria-labelledby="parallax-heading">
   <div
     class="parallax-highlight__bg"
-    style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&q=80&fm=webp&fit=crop&auto=format');"
+    style="background-image: url('img/parallax.jpg');"
     aria-hidden="true"
   ></div>
   <div class="parallax-highlight__corners" aria-hidden="true"></div>
@@ -576,11 +569,8 @@
 
       <div class="infrared__media reveal reveal--left">
         <img
-          src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=900&q=80&fm=webp&fit=crop&auto=format"
-          srcset="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80&fm=webp&fit=crop&auto=format 600w,
-                  https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=900&q=80&fm=webp&fit=crop&auto=format 900w"
-          sizes="(max-width: 900px) 90vw, 40vw"
-          alt="Infraröd cedarträ-bastu i varmt ljus"
+          src="img/bastu.jpg"
+          alt="Infrarod bastu pa Cutie Spa Nacka"
           loading="lazy"
           decoding="async"
         />
@@ -609,7 +599,7 @@
 
       <a href="salonger/mall-of-scandinavia.html" class="card card--salon">
         <div class="card__image">
-          <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&q=80&fm=webp&fit=crop&auto=format" alt="Cutie Spa Mall of Scandinavia interiör" loading="lazy" decoding="async" />
+          <img src="img/salon-mos.jpg" alt="Cutie Spa Mall of Scandinavia" loading="lazy" decoding="async" />
         </div>
         <div class="card__body">
           <span class="card__eyebrow">Solna</span>
@@ -622,7 +612,7 @@
 
       <a href="salonger/saltsjobaden.html" class="card card--salon">
         <div class="card__image">
-          <img src="https://images.unsplash.com/photo-1591343395082-e120087004b4?w=600&q=80&fm=webp&fit=crop&auto=format" alt="Cutie Nails Saltsjöbaden interiör" loading="lazy" decoding="async" />
+          <img src="img/salon-saltsjobaden.jpg" alt="Cutie Nails Saltsjobaden" loading="lazy" decoding="async" />
         </div>
         <div class="card__body">
           <span class="card__eyebrow">Saltsjöbaden</span>
@@ -635,7 +625,7 @@
 
       <a href="salonger/danderyd.html" class="card card--salon">
         <div class="card__image">
-          <img src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=600&q=80&fm=webp&fit=crop&auto=format" alt="Blissful by Cutie Care Danderyd interiör" loading="lazy" decoding="async" />
+          <img src="img/salon-danderyd.jpg" alt="Blissful by Cutie Care Danderyd" loading="lazy" decoding="async" />
         </div>
         <div class="card__body">
           <span class="card__eyebrow">Danderyd</span>
@@ -648,7 +638,7 @@
 
       <a href="salonger/taby.html" class="card card--salon">
         <div class="card__image">
-          <img src="https://images.unsplash.com/photo-1583416750470-965b2707b355?w=600&q=80&fm=webp&fit=crop&auto=format" alt="Cutie Spa Täby interiör" loading="lazy" decoding="async" />
+          <img src="img/salon-taby.jpg" alt="Cutie Spa Taby bastu" loading="lazy" decoding="async" />
         </div>
         <div class="card__body">
           <span class="card__eyebrow">Täby</span>
@@ -661,7 +651,7 @@
 
       <a href="salonger/nacka-forum.html" class="card card--salon">
         <div class="card__image">
-          <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80&fm=webp&fit=crop&auto=format" alt="Cutie Spa Nacka Forum interiör med infraröd bastu" loading="lazy" decoding="async" />
+          <img src="img/salon-nacka.jpg" alt="Cutie Spa Nacka Forum infrarod bastu" loading="lazy" decoding="async" />
         </div>
         <div class="card__body">
           <span class="card__eyebrow">Nacka · ✦ Infraröd</span>
