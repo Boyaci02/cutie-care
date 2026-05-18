@@ -164,12 +164,16 @@
 <!-- FRISKVÅRD POP-UP (visas efter 2 sek) -->
 <div class="friskvard-popup" id="friskvardPopup" role="dialog" aria-label="Friskvårdsförmåner">
   <button class="friskvard-popup__close" aria-label="Stäng" onclick="document.getElementById('friskvardPopup').classList.remove('friskvard-popup--visible')">&times;</button>
-  <div class="friskvard-popup__icon">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-  </div>
   <p class="friskvard-popup__title">Friskvård</p>
-  <p class="friskvard-popup__body">Använd ditt friskvårdsbidrag hos oss via Benifex, Epassi, Wellnet, Edenred eller Söderberg&nbsp;&amp;&nbsp;Partners.</p>
-  <a href="friskvard.html" class="btn btn--sm">Läs mer</a>
+  <p class="friskvard-popup__body">Använd ditt friskvårdsbidrag direkt hos oss.</p>
+  <div class="friskvard-popup__logos">
+    <img src="img/friskvard-benifex.webp" alt="Benifex" />
+    <img src="img/friskvard-epassi.webp" alt="Epassi" />
+    <img src="img/friskvard-wellnet.webp" alt="Wellnet" />
+    <img src="img/friskvard-soderberg.webp" alt="Söderberg &amp; Partners" />
+    <img src="img/friskvard-edenred.webp" alt="Edenred" />
+  </div>
+  <a href="friskvard.html" class="friskvard-popup__link">Läs mer &rarr;</a>
 </div>
 
 <style>
@@ -282,28 +286,41 @@
     color: #888;
     line-height: 1;
   }
-  .friskvard-popup__icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    background: var(--red, #c62828);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 12px;
-  }
   .friskvard-popup__title {
     font-size: 1.1rem;
     font-weight: 700;
-    margin: 0 0 6px;
+    margin: 0 0 4px;
     color: var(--dark, #1a1a1a);
   }
   .friskvard-popup__body {
-    font-size: .85rem;
-    color: #555;
-    line-height: 1.5;
-    margin: 0 0 16px;
+    font-size: .8rem;
+    color: #777;
+    line-height: 1.4;
+    margin: 0 0 14px;
+  }
+  .friskvard-popup__logos {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .friskvard-popup__logos img {
+    height: 20px;
+    width: auto;
+    opacity: .7;
+    filter: grayscale(100%);
+    transition: opacity .2s, filter .2s;
+  }
+  .friskvard-popup__logos img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+  }
+  .friskvard-popup__link {
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--red, #c62828);
+    text-decoration: none;
   }
 
   @media (max-width: 768px) {
