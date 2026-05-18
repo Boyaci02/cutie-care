@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Hero image preload (LCP) -->
-  <link rel="preload" as="image" href="img/hero.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="img/hero-promo.jpg" fetchpriority="high" />
 
   <!-- Stylesheets — split for clarity, parallel HTTP/2 download -->
   <link rel="stylesheet" href="css/tokens.css" />
@@ -135,90 +135,214 @@
 <main id="main">
 
 <!-- ============================================================
-     2. HERO
+     2. HERO — Månadens Erbjudande (fullbleed promo)
      ============================================================ -->
-<section class="hero" aria-label="Välkomstsektion">
-  <div class="container">
-    <div class="hero__inner">
+<section class="hero-promo" aria-label="Månadens erbjudande">
+  <picture>
+    <source media="(max-width: 768px)" srcset="img/hero-mobile.jpg" />
+    <img
+      class="hero-promo__bg"
+      src="img/hero-promo.jpg"
+      alt="Body Scrub &amp; Massage behandling på Cutie Spa"
+      fetchpriority="high"
+      decoding="async"
+    />
+  </picture>
+  <div class="hero-promo__overlay"></div>
 
-      <div class="hero__text reveal reveal--right">
-        <span class="hero__eyebrow">Cutie Care · Skönhet &amp; Massage</span>
-        <h1 class="hero__title">
-          Vårda <em>Din</em> Kropp,<br />
-          Lyft <em>Din</em> Själ
-        </h1>
-        <p class="hero__sub">Skapa lugna stunder där kropp, sinne och inre frid möts — autentisk asiatisk omvårdnad mitt i Stockholm sedan 2012.</p>
-
-        <div class="hero__cta-row">
-          <a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn--lg" target="_blank" rel="noopener">
-            Boka Behandling <span class="arrow">→</span>
-          </a>
-          <a href="#tjanster" class="btn btn--ghost-light btn--lg">Utforska Behandlingar</a>
-        </div>
-
-        <div class="hero__pills">
-          <span class="tag tag--glass">✦ 4 Salonger i Stockholm</span>
-          <span class="tag tag--glass">⭐ 4,8 Betyg på Google</span>
-        </div>
-      </div>
-
-      <div class="hero__media reveal reveal--left">
-        <div class="hero__media__img-wrap">
-          <img
-            src="img/hero.jpg"
-            alt="CutieSPA entre med neonskyltar"
-            fetchpriority="high"
-            decoding="async"
-          />
-        </div>
-        <div class="hero__media__badge" aria-hidden="true">
-          <strong>2012</strong>
-          <span>sedan</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <a href="#friskvard-banner" class="scroll-indicator" aria-label="Scrolla ner">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <polyline points="6 9 12 15 18 9"/>
-    </svg>
-  </a>
-</section>
-
-
-<!-- ============================================================
-     3. FRISKVÅRDSBANNER (marquee)
-     ============================================================ -->
-<section class="friskvard-banner" id="friskvard-banner" aria-label="Friskvårdsförmåner">
-  <p class="friskvard-banner__label">Använd din friskvård hos oss</p>
-  <div class="marquee">
-    <div class="marquee__track">
-      <span class="marquee__item marquee__item--logo">Benifex</span>
-      <span class="marquee__dot"></span>
-      <span class="marquee__item marquee__item--logo">Epassi</span>
-      <span class="marquee__dot"></span>
-      <span class="marquee__item marquee__item--logo">Wellnet</span>
-      <span class="marquee__dot"></span>
-      <span class="marquee__item marquee__item--logo">Söderberg &amp; Partners</span>
-      <span class="marquee__dot"></span>
-      <span class="marquee__item marquee__item--logo">Edenred</span>
-      <span class="marquee__dot"></span>
-      <!-- Duplicate for seamless loop -->
-      <span class="marquee__item marquee__item--logo" aria-hidden="true">Benifex</span>
-      <span class="marquee__dot" aria-hidden="true"></span>
-      <span class="marquee__item marquee__item--logo" aria-hidden="true">Epassi</span>
-      <span class="marquee__dot" aria-hidden="true"></span>
-      <span class="marquee__item marquee__item--logo" aria-hidden="true">Wellnet</span>
-      <span class="marquee__dot" aria-hidden="true"></span>
-      <span class="marquee__item marquee__item--logo" aria-hidden="true">Söderberg &amp; Partners</span>
-      <span class="marquee__dot" aria-hidden="true"></span>
-      <span class="marquee__item marquee__item--logo" aria-hidden="true">Edenred</span>
-      <span class="marquee__dot" aria-hidden="true"></span>
+  <div class="hero-promo__content">
+    <span class="hero-promo__eyebrow">Maj Erbjudande</span>
+    <h1 class="hero-promo__title">
+      Body Scrub<br />&amp; Massage
+    </h1>
+    <p class="hero-promo__price">
+      <span class="hero-promo__price-old">1 495 kr</span>
+      <span class="hero-promo__price-new">1 196 kr</span>
+    </p>
+    <p class="hero-promo__sub">55 min kokos body scrub + massage. Gäller alla salonger.</p>
+    <a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn--lg hero-promo__cta" target="_blank" rel="noopener">
+      Boka Nu <span class="arrow">&rarr;</span>
+    </a>
+    <div class="hero-promo__pills">
+      <span class="tag tag--glass">4 Salonger i Stockholm</span>
+      <span class="tag tag--glass">Sedan 2012</span>
     </div>
   </div>
 </section>
+
+<!-- FRISKVÅRD POP-UP (visas efter 2 sek) -->
+<div class="friskvard-popup" id="friskvardPopup" role="dialog" aria-label="Friskvårdsförmåner">
+  <button class="friskvard-popup__close" aria-label="Stäng" onclick="document.getElementById('friskvardPopup').classList.remove('friskvard-popup--visible')">&times;</button>
+  <div class="friskvard-popup__icon">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+  </div>
+  <p class="friskvard-popup__title">Friskvård</p>
+  <p class="friskvard-popup__body">Använd ditt friskvårdsbidrag hos oss via Benifex, Epassi, Wellnet, Edenred eller Söderberg&nbsp;&amp;&nbsp;Partners.</p>
+  <a href="friskvard.html" class="btn btn--sm">Läs mer</a>
+</div>
+
+<style>
+  /* ---- HERO PROMO (fullbleed) ---- */
+  .hero-promo {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .hero-promo__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    z-index: 0;
+  }
+  .hero-promo__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.55) 100%);
+    z-index: 1;
+  }
+  .hero-promo__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 120px 24px 80px;
+    max-width: 640px;
+  }
+  .hero-promo__eyebrow {
+    display: inline-block;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--red, #c62828);
+    background: #fff;
+    padding: 6px 20px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+  }
+  .hero-promo__title {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    margin: 0 0 16px;
+    text-shadow: 0 2px 24px rgba(0,0,0,.4);
+  }
+  .hero-promo__price {
+    font-size: 1.25rem;
+    margin: 0 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  .hero-promo__price-old {
+    text-decoration: line-through;
+    opacity: .6;
+    font-size: 1rem;
+  }
+  .hero-promo__price-new {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--red, #c62828);
+    background: #fff;
+    padding: 4px 16px;
+    border-radius: 8px;
+  }
+  .hero-promo__sub {
+    font-size: 1rem;
+    opacity: .85;
+    margin: 16px 0 32px;
+    line-height: 1.5;
+  }
+  .hero-promo__cta {
+    font-size: 1.1rem;
+    padding: 16px 40px;
+  }
+  .hero-promo__pills {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+
+  /* ---- FRISKVÅRD POP-UP ---- */
+  .friskvard-popup {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0,0,0,.18);
+    padding: 24px;
+    max-width: 320px;
+    z-index: 9000;
+    transform: translateY(120%);
+    opacity: 0;
+    transition: transform .5s cubic-bezier(.16,1,.3,1), opacity .4s ease;
+  }
+  .friskvard-popup--visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .friskvard-popup__close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #888;
+    line-height: 1;
+  }
+  .friskvard-popup__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--red, #c62828);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  .friskvard-popup__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 6px;
+    color: var(--dark, #1a1a1a);
+  }
+  .friskvard-popup__body {
+    font-size: .85rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0 0 16px;
+  }
+
+  @media (max-width: 768px) {
+    .hero-promo__bg {
+      object-position: center center;
+    }
+    .hero-promo__content {
+      padding: 100px 20px 60px;
+    }
+    .friskvard-popup {
+      bottom: 80px;
+      right: 12px;
+      left: 12px;
+      max-width: none;
+    }
+  }
+</style>
 
 
 <!-- ============================================================
@@ -1014,6 +1138,16 @@
 
 
 <script src="js/main.js" defer></script>
+<script>
+  // Friskvård popup — visas efter 2 sek, stängs automatiskt efter 8 sek
+  setTimeout(function(){
+    var popup = document.getElementById('friskvardPopup');
+    if(popup) {
+      popup.classList.add('friskvard-popup--visible');
+      setTimeout(function(){ popup.classList.remove('friskvard-popup--visible'); }, 8000);
+    }
+  }, 2000);
+</script>
 <script defer>
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
   window.addEventListener('load', () => { if (window.fbq) { fbq('init','603933431208553'); fbq('track','PageView'); } });
