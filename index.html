@@ -190,8 +190,9 @@
     min-height: 100svh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     overflow: hidden;
+    background: #f5f0eb;
   }
   .hero-promo__bg {
     position: absolute;
@@ -199,22 +200,20 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 30%;
+    object-position: left center;
     z-index: 0;
   }
   .hero-promo__overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.55) 100%);
-    z-index: 1;
+    display: none;
   }
   .hero-promo__content {
     position: relative;
     z-index: 2;
-    text-align: center;
-    color: #fff;
-    padding: 120px 24px 80px;
-    max-width: 640px;
+    text-align: left;
+    color: #1a1a1a;
+    padding: 120px 64px 80px;
+    max-width: 520px;
+    margin-right: 5%;
   }
   .hero-promo__eyebrow {
     display: inline-block;
@@ -222,43 +221,44 @@
     font-weight: 600;
     letter-spacing: .18em;
     text-transform: uppercase;
-    color: var(--red, #c62828);
-    background: #fff;
+    color: #fff;
+    background: var(--red, #c62828);
     padding: 6px 20px;
     border-radius: 100px;
     margin-bottom: 24px;
   }
   .hero-promo__title {
-    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 700;
     line-height: 1.05;
     margin: 0 0 16px;
-    text-shadow: 0 2px 24px rgba(0,0,0,.4);
+    color: #1a1a1a;
   }
   .hero-promo__price {
     font-size: 1.25rem;
     margin: 0 0 8px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 16px;
   }
   .hero-promo__price-old {
     text-decoration: line-through;
-    opacity: .6;
+    opacity: .5;
     font-size: 1rem;
+    color: #555;
   }
   .hero-promo__price-new {
     font-size: 1.75rem;
     font-weight: 700;
-    color: var(--red, #c62828);
-    background: #fff;
+    color: #fff;
+    background: var(--red, #c62828);
     padding: 4px 16px;
     border-radius: 8px;
   }
   .hero-promo__sub {
     font-size: 1rem;
-    opacity: .85;
+    color: #555;
     margin: 16px 0 32px;
     line-height: 1.5;
   }
@@ -268,10 +268,15 @@
   }
   .hero-promo__pills {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 12px;
     margin-top: 32px;
     flex-wrap: wrap;
+  }
+  .hero-promo__pills .tag {
+    background: rgba(0,0,0,.06);
+    color: #333;
+    backdrop-filter: none;
   }
 
   /* ---- FRISKVÅRD POP-UP ---- */
@@ -329,12 +334,22 @@
   }
 
   @media (max-width: 768px) {
+    .hero-promo {
+      justify-content: center;
+      align-items: flex-end;
+    }
     .hero-promo__bg {
-      object-position: center center;
+      object-position: 25% center;
     }
     .hero-promo__content {
-      padding: 100px 20px 60px;
+      text-align: center;
+      padding: 60px 20px 100px;
+      margin-right: 0;
+      max-width: 100%;
+      background: linear-gradient(0deg, rgba(245,240,235,.95) 60%, rgba(245,240,235,.6) 85%, transparent 100%);
     }
+    .hero-promo__price { justify-content: center; }
+    .hero-promo__pills { justify-content: center; }
     .friskvard-popup {
       bottom: 80px;
       right: 12px;
