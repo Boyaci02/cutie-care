@@ -154,18 +154,10 @@
     <h1 class="hero-promo__title">
       Body Scrub<br />&amp; Massage
     </h1>
-    <p class="hero-promo__price">
-      <span class="hero-promo__price-old">1 495 kr</span>
-      <span class="hero-promo__price-new">1 196 kr</span>
-    </p>
-    <p class="hero-promo__sub">55 min kokos body scrub + massage. Gäller alla salonger.</p>
-    <a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="btn btn--lg hero-promo__cta" target="_blank" rel="noopener">
-      Boka Nu <span class="arrow">&rarr;</span>
+    <p class="hero-promo__sub">55 min &mdash; fr. <s>1 495</s> <strong>1 196 kr</strong></p>
+    <a href="https://www.bokadirekt.se/places/cutie-spa-nacka-52128" class="hero-promo__link" target="_blank" rel="noopener">
+      Boka tid &rarr;
     </a>
-    <div class="hero-promo__pills">
-      <span class="tag tag--glass">4 Salonger i Stockholm</span>
-      <span class="tag tag--glass">Sedan 2012</span>
-    </div>
   </div>
 </section>
 
@@ -211,71 +203,53 @@
     text-align: left;
     color: #1a1a1a;
     padding: 120px 64px 80px;
-    max-width: 520px;
+    max-width: 480px;
     margin-right: 5%;
   }
   .hero-promo__eyebrow {
     display: inline-block;
-    font-size: .75rem;
+    font-size: .7rem;
     font-weight: 600;
-    letter-spacing: .18em;
+    letter-spacing: .2em;
     text-transform: uppercase;
-    color: #fff;
-    background: var(--red, #c62828);
-    padding: 6px 20px;
-    border-radius: 100px;
-    margin-bottom: 24px;
+    color: var(--red, #c62828);
+    background: none;
+    padding: 0;
+    margin-bottom: 16px;
   }
   .hero-promo__title {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 700;
     line-height: 1.05;
-    margin: 0 0 16px;
+    margin: 0 0 20px;
     color: #1a1a1a;
   }
-  .hero-promo__price {
-    font-size: 1.25rem;
-    margin: 0 0 8px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 16px;
-  }
-  .hero-promo__price-old {
-    text-decoration: line-through;
-    opacity: .5;
-    font-size: 1rem;
-    color: #555;
-  }
-  .hero-promo__price-new {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #fff;
-    background: var(--red, #c62828);
-    padding: 4px 16px;
-    border-radius: 8px;
-  }
   .hero-promo__sub {
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: #555;
-    margin: 16px 0 32px;
-    line-height: 1.5;
+    margin: 0 0 24px;
+    line-height: 1.6;
   }
-  .hero-promo__cta {
-    font-size: 1.1rem;
-    padding: 16px 40px;
+  .hero-promo__sub s {
+    color: #999;
+    text-decoration-color: #999;
   }
-  .hero-promo__pills {
-    display: flex;
-    justify-content: flex-start;
-    gap: 12px;
-    margin-top: 32px;
-    flex-wrap: wrap;
+  .hero-promo__sub strong {
+    color: #1a1a1a;
+    font-weight: 600;
   }
-  .hero-promo__pills .tag {
-    background: rgba(0,0,0,.06);
-    color: #333;
-    backdrop-filter: none;
+  .hero-promo__link {
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--red, #c62828);
+    text-decoration: none;
+    letter-spacing: .04em;
+    border-bottom: 1.5px solid var(--red, #c62828);
+    padding-bottom: 2px;
+    transition: opacity .2s;
+  }
+  .hero-promo__link:hover {
+    opacity: .7;
   }
 
   /* ---- FRISKVÅRD POP-UP ---- */
@@ -342,44 +316,16 @@
     }
     .hero-promo__content {
       text-align: center;
-      padding: 80px 24px 0;
+      padding: 90px 28px 0;
       margin-right: 0;
       max-width: 100%;
       background: none;
     }
-    .hero-promo__eyebrow {
-      font-size: .65rem;
-      padding: 5px 16px;
-      margin-bottom: 12px;
-    }
     .hero-promo__title {
-      font-size: 1.8rem;
-      margin-bottom: 8px;
-    }
-    .hero-promo__price {
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 4px;
-    }
-    .hero-promo__price-new {
-      font-size: 1.3rem;
-      padding: 3px 12px;
+      font-size: 2rem;
     }
     .hero-promo__sub {
-      font-size: .85rem;
-      margin: 8px 0 16px;
-    }
-    .hero-promo__cta {
       font-size: .95rem;
-      padding: 12px 32px;
-    }
-    .hero-promo__pills {
-      justify-content: center;
-      margin-top: 12px;
-    }
-    .hero-promo__pills .tag {
-      font-size: .7rem;
-      padding: 4px 10px;
     }
     .friskvard-popup {
       bottom: 80px;
