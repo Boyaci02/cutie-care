@@ -107,7 +107,7 @@ p strong { color: var(--color-near-black); font-weight: 600; }
 
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: 0;
   left: 16px;
   background: var(--color-near-black);
   color: var(--color-white);
@@ -116,10 +116,11 @@ p strong { color: var(--color-near-black); font-weight: 600; }
   z-index: 10000;
   font-size: 0.875rem;
   text-decoration: none;
-  transition: top var(--dur-fast) var(--ease-out);
+  transform: translateY(-100%);
+  transition: transform var(--dur-fast) var(--ease-out);
 }
 
-.skip-link:focus { top: 16px; }
+.skip-link:focus { transform: translateY(16px); }
 
 /* ── FOCUS STATES ──────────────────────────────────────── */
 
