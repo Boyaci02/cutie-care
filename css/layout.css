@@ -229,6 +229,10 @@
   overflow: hidden;
 }
 
+.page-hero h1,
+.page-hero h2,
+.page-hero p { color: var(--color-white); }
+
 .page-hero::before {
   content: '';
   position: absolute;
