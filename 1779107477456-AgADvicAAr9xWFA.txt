@@ -1,0 +1,4 @@
+Jättebra, jag känner mig nöjd med QDQ hemsidan nu. Jag kommer återkomma med feedback för den i morgon.
+Men någonting jag vill att vi ska göra nu, jag vill att vi ska gå igenom hela våra nya syns nu hemsida som vi håller på att bygga i Vercel.
+Och egentligen gå igenom om allting i sidan fungerar som det ska så att om jag deployar sidan idag så fungerar alla formulärer, all info stämmer och så.
+Om vi även kan dubbelkolla det jämfört med våra riktiga synsnummedia hemsida på synsnummedia.se och kolla alla sidor som vi har där idag och kolla på vad vi saknar på den nya hemsidan så att vi kan deploya den nya sidan idag.
