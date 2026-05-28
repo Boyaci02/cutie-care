@@ -1862,14 +1862,45 @@
 }
 
 .partner-acc__body {
-  display: none;
-  padding: 0 24px 24px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 24px;
   font-size: 0.9375rem;
   line-height: 1.7;
   color: var(--color-warm-gray);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition:
+    max-height 380ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    padding 380ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 240ms ease-out 60ms,
+    transform 320ms cubic-bezier(0.22, 0.61, 0.36, 1) 40ms;
 }
 
-.partner-acc__item.open .partner-acc__body { display: block; }
+.partner-acc__item.open .partner-acc__body {
+  max-height: 600px;
+  padding: 4px 24px 24px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.partner-acc__item {
+  transition: border-color var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out);
+}
+
+.partner-acc__item.open {
+  border-color: rgba(196, 30, 58, 0.25);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
+}
+
+.partner-acc__header {
+  transition: background var(--dur-base) var(--ease-out);
+}
+
+.partner-acc__header:hover {
+  background: rgba(196, 30, 58, 0.03);
+}
 
 .partner-badges {
   display: grid;
