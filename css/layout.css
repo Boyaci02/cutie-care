@@ -118,7 +118,7 @@ body.home .nav:not(.scrolled) .nav__link.is-active { color: var(--color-red); }
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: calc(100% + 16px);
+  top: calc(100% + 12px);
   left: 50%;
   transform: translate(-50%, -8px);
   background: rgba(26, 26, 26, 0.96);
@@ -133,6 +133,19 @@ body.home .nav:not(.scrolled) .nav__link.is-active { color: var(--color-red); }
   pointer-events: none;
   transition: opacity var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
   z-index: 100;
+}
+
+/* Invisible bridge — keeps :hover alive when cursor crosses the gap
+   between the nav link and the dropdown panel. Sits on .nav__item so it
+   works even before the dropdown becomes interactive. */
+.nav__item::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -16px;
+  right: -16px;
+  height: 24px;
+  z-index: 99;
 }
 
 .nav__item:hover .nav__dropdown,
