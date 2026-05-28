@@ -2061,7 +2061,6 @@
 
 .logo-marquee__track {
   display: flex;
-  gap: 80px;
   align-items: center;
   width: max-content;
   animation: marquee-scroll 28s linear infinite;
@@ -2072,6 +2071,7 @@
   height: 44px;
   width: auto;
   flex-shrink: 0;
+  margin-right: 80px;
   opacity: 0.78;
   transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
   filter: grayscale(15%);
@@ -2085,7 +2085,7 @@
 
 @keyframes marquee-scroll {
   from { transform: translateX(0); }
-  to   { transform: translateX(calc(-50% - 40px)); }
+  to   { transform: translateX(-50%); }
 }
 
 @media (prefers-reduced-motion: reduce) {
