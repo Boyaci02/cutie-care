@@ -423,94 +423,131 @@
 
 
 <!-- ============================================================
-     5. BEHANDLINGSÖVERSIKT (bento, 8 kort)
+     5. BEHANDLINGSCAROUSELL (gallery4-stil)
      ============================================================ -->
-<section class="treatments-bento" id="tjanster" aria-labelledby="treatments-heading">
+<section class="services-carousel" id="tjanster" aria-labelledby="treatments-heading">
   <div class="container">
-
-    <div class="treatments-bento__header reveal">
-      <span class="eyebrow eyebrow--center eyebrow--no-line">Våra Behandlingar</span>
-      <h2 id="treatments-heading" class="treatments-bento__title">
-        Skräddarsydda behandlingar för <em>ditt välbefinnande</em>
-      </h2>
-      <p class="treatments-bento__sub">Åtta noggrant utvalda behandlingskategorier — från klassisk massage till avslappnande bastu, varje upplevelse formad efter just dina behov.</p>
+    <div class="services-carousel__header reveal">
+      <div class="services-carousel__heading">
+        <span class="eyebrow eyebrow--no-line">Våra Behandlingar</span>
+        <h2 id="treatments-heading">Skräddarsydda behandlingar för <em>ditt välbefinnande</em></h2>
+        <p>Åtta noggrant utvalda behandlingskategorier — från klassisk massage till avslappnande bastu, varje upplevelse formad efter just dina behov.</p>
+      </div>
+      <div class="services-carousel__nav" aria-label="Carousell-kontroller">
+        <button class="services-carousel__btn" type="button" data-services-nav="prev" aria-label="Föregående behandling">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        </button>
+        <button class="services-carousel__btn" type="button" data-services-nav="next" aria-label="Nästa behandling">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
     </div>
+  </div>
 
-    <div class="treatments-scroll reveal" style="display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:0 0 24px;margin:0 -24px;padding-left:24px;scrollbar-width:none;">
+  <div class="services-carousel__track-wrap reveal">
+    <div class="services-carousel__track" id="servicesTrack">
 
-      <a href="behandlingar/massage.html" class="tile-card" style="scroll-snap-align:start;min-width:280px;max-width:320px;flex-shrink:0;border-radius:16px;overflow:hidden;position:relative;display:block;text-decoration:none;color:inherit;box-shadow:0 2px 16px rgba(0,0,0,0.08);transition:transform 0.3s,box-shadow 0.3s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.12)'" onmouseleave="this.style.transform='';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.08)'">
-        <div style="aspect-ratio:4/3;overflow:hidden"><img src="img/massage.jpg" alt="Massage pa Cutie Spa" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block" /></div>
-        <div style="padding:20px;background:var(--white)">
-          <h3 style="font-family:var(--font-serif);font-size:1.15rem;margin:0 0 6px">Massage</h3>
-          <p style="font-size:0.85rem;color:#777;margin:0 0 10px">10+ massagetyper av erfarna terapeuter</p>
-          <span style="font-size:0.85rem;font-weight:600;color:var(--color-red)">Från 695 kr</span>
+      <a href="behandlingar/massage.html" class="service-card">
+        <img src="img/massage.jpg" alt="Massage på Cutie Spa" loading="lazy" decoding="async" class="service-card__img" />
+        <span class="service-card__overlay" aria-hidden="true"></span>
+        <div class="service-card__content">
+          <h3 class="service-card__title">Massage</h3>
+          <p class="service-card__desc">10+ massagetyper utförda av erfarna terapeuter.</p>
+          <span class="service-card__cta">Från 695 kr
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
         </div>
       </a>
 
-      <a href="behandlingar/manikyr.html" class="tile-card" style="scroll-snap-align:start;min-width:280px;max-width:320px;flex-shrink:0;border-radius:16px;overflow:hidden;position:relative;display:block;text-decoration:none;color:inherit;box-shadow:0 2px 16px rgba(0,0,0,0.08);transition:transform 0.3s,box-shadow 0.3s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.12)'" onmouseleave="this.style.transform='';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.08)'">
-        <div style="aspect-ratio:4/3;overflow:hidden"><img src="img/manikyr.jpg" alt="Manikyr pa Cutie Spa" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block" /></div>
-        <div style="padding:20px;background:var(--white)">
-          <h3 style="font-family:var(--font-serif);font-size:1.15rem;margin:0 0 6px">Manikyr</h3>
-          <p style="font-size:0.85rem;color:#777;margin:0 0 10px">Gellack, gele och klassisk manikyr</p>
-          <span style="font-size:0.85rem;font-weight:600;color:var(--color-red)">Från 415 kr</span>
+      <a href="behandlingar/manikyr.html" class="service-card">
+        <img src="img/manikyr.jpg" alt="Manikyr på Cutie Spa" loading="lazy" decoding="async" class="service-card__img" />
+        <span class="service-card__overlay" aria-hidden="true"></span>
+        <div class="service-card__content">
+          <h3 class="service-card__title">Manikyr</h3>
+          <p class="service-card__desc">Gellack, gel och klassisk manikyr i lugn miljö.</p>
+          <span class="service-card__cta">Från 415 kr
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
         </div>
       </a>
 
-      <a href="behandlingar/pedikyr.html" class="tile-card" style="scroll-snap-align:start;min-width:280px;max-width:320px;flex-shrink:0;border-radius:16px;overflow:hidden;position:relative;display:block;text-decoration:none;color:inherit;box-shadow:0 2px 16px rgba(0,0,0,0.08);transition:transform 0.3s,box-shadow 0.3s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.12)'" onmouseleave="this.style.transform='';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.08)'">
-        <div style="aspect-ratio:4/3;overflow:hidden"><img src="img/pedikyr.jpg" alt="Pedikyr pa Cutie Spa" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block" /></div>
-        <div style="padding:20px;background:var(--white)">
-          <h3 style="font-family:var(--font-serif);font-size:1.15rem;margin:0 0 6px">Pedikyr</h3>
-          <p style="font-size:0.85rem;color:#777;margin:0 0 10px">Fotvård, pedikyr och fotmassage</p>
-          <span style="font-size:0.85rem;font-weight:600;color:var(--color-red)">Från 595 kr</span>
+      <a href="behandlingar/pedikyr.html" class="service-card">
+        <img src="img/pedikyr.jpg" alt="Pedikyr på Cutie Spa" loading="lazy" decoding="async" class="service-card__img" />
+        <span class="service-card__overlay" aria-hidden="true"></span>
+        <div class="service-card__content">
+          <h3 class="service-card__title">Pedikyr</h3>
+          <p class="service-card__desc">Fotvård, pedikyr och fotmassage — för glada fötter.</p>
+          <span class="service-card__cta">Från 595 kr
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
         </div>
       </a>
 
-      <a href="behandlingar/spa.html" class="tile-card" style="scroll-snap-align:start;min-width:280px;max-width:320px;flex-shrink:0;border-radius:16px;overflow:hidden;position:relative;display:block;text-decoration:none;color:inherit;box-shadow:0 2px 16px rgba(0,0,0,0.08);transition:transform 0.3s,box-shadow 0.3s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.12)'" onmouseleave="this.style.transform='';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.08)'">
-        <div style="aspect-ratio:4/3;overflow:hidden"><img src="img/spa.jpg" alt="Spa behandling pa Cutie Spa" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block" /></div>
-        <div style="padding:20px;background:var(--white)">
-          <h3 style="font-family:var(--font-serif);font-size:1.15rem;margin:0 0 6px">Spa &amp; Ansikte</h3>
-          <p style="font-size:0.85rem;color:#777;margin:0 0 10px">Body scrub, ansiktsbehandling och aromaterapi</p>
-          <span style="font-size:0.85rem;font-weight:600;color:var(--color-red)">Från 615 kr</span>
+      <a href="behandlingar/spa.html" class="service-card">
+        <img src="img/spa.jpg" alt="Spa-behandling på Cutie Spa" loading="lazy" decoding="async" class="service-card__img" />
+        <span class="service-card__overlay" aria-hidden="true"></span>
+        <div class="service-card__content">
+          <h3 class="service-card__title">Spa &amp; Ansikte</h3>
+          <p class="service-card__desc">Body scrub, ansiktsbehandling och aromaterapi.</p>
+          <span class="service-card__cta">Från 615 kr
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
         </div>
       </a>
 
-      <a href="behandlingar/bastu.html" class="tile-card" style="scroll-snap-align:start;min-width:280px;max-width:320px;flex-shrink:0;border-radius:16px;overflow:hidden;position:relative;display:block;text-decoration:none;color:inherit;box-shadow:0 2px 16px rgba(0,0,0,0.08);transition:transform 0.3s,box-shadow 0.3s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.12)'" onmouseleave="this.style.transform='';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.08)'">
-        <div style="aspect-ratio:4/3;overflow:hidden"><img src="img/bastu.jpg" alt="Bastu pa Cutie Spa" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block" /></div>
-        <div style="padding:20px;background:var(--white)">
-          <h3 style="font-family:var(--font-serif);font-size:1.15rem;margin:0 0 6px">Bastu</h3>
-          <p style="font-size:0.85rem;color:#777;margin:0 0 10px">Avslappnande bastuvärme i Nacka och Täby</p>
-          <span style="font-size:0.85rem;font-weight:600;color:var(--color-red)">Från 395 kr</span>
+      <a href="behandlingar/bastu.html" class="service-card">
+        <img src="img/bastu.jpg" alt="Bastu på Cutie Spa" loading="lazy" decoding="async" class="service-card__img" />
+        <span class="service-card__overlay" aria-hidden="true"></span>
+        <div class="service-card__content">
+          <h3 class="service-card__title">Bastu</h3>
+          <p class="service-card__desc">Avslappnande bastuvärme i Nacka Forum och Täby Centrum.</p>
+          <span class="service-card__cta">Från 395 kr
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
         </div>
       </a>
 
-      <a href="behandlingar/ogonfransar.html" class="tile-card" style="scroll-snap-align:start;min-width:280px;max-width:320px;flex-shrink:0;border-radius:16px;overflow:hidden;position:relative;display:block;text-decoration:none;color:inherit;box-shadow:0 2px 16px rgba(0,0,0,0.08);transition:transform 0.3s,box-shadow 0.3s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.12)'" onmouseleave="this.style.transform='';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.08)'">
-        <div style="aspect-ratio:4/3;overflow:hidden"><img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=800&q=80&fm=webp&fit=crop&auto=format" alt="Fransar och bryn behandling" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block" /></div>
-        <div style="padding:20px;background:var(--white)">
-          <h3 style="font-family:var(--font-serif);font-size:1.15rem;margin:0 0 6px">Fransar &amp; Bryn</h3>
-          <p style="font-size:0.85rem;color:#777;margin:0 0 10px">Fransförlängning, lyft och formning</p>
-          <span style="font-size:0.85rem;font-weight:600;color:var(--color-red)">Från 395 kr</span>
+      <a href="behandlingar/ogonfransar.html" class="service-card">
+        <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=800&amp;q=80&amp;fm=webp&amp;fit=crop&amp;auto=format" alt="Fransar och bryn-behandling" loading="lazy" decoding="async" class="service-card__img" />
+        <span class="service-card__overlay" aria-hidden="true"></span>
+        <div class="service-card__content">
+          <h3 class="service-card__title">Fransar &amp; Bryn</h3>
+          <p class="service-card__desc">Fransförlängning, lyft och formning av bryn.</p>
+          <span class="service-card__cta">Från 395 kr
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
         </div>
       </a>
 
-      <a href="behandlingar/vaxning.html" class="tile-card" style="scroll-snap-align:start;min-width:280px;max-width:320px;flex-shrink:0;border-radius:16px;overflow:hidden;position:relative;display:block;text-decoration:none;color:inherit;box-shadow:0 2px 16px rgba(0,0,0,0.08);transition:transform 0.3s,box-shadow 0.3s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.12)'" onmouseleave="this.style.transform='';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.08)'">
-        <div style="aspect-ratio:4/3;overflow:hidden"><img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=800&q=80&fm=webp&fit=crop&auto=format" alt="Vaxningsbehandling" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block" /></div>
-        <div style="padding:20px;background:var(--white)">
-          <h3 style="font-family:var(--font-serif);font-size:1.15rem;margin:0 0 6px">Vaxning</h3>
-          <p style="font-size:0.85rem;color:#777;margin:0 0 10px">Kroppsvaxning och ansiktsvaxning</p>
-          <span style="font-size:0.85rem;font-weight:600;color:var(--color-red)">Från 295 kr</span>
+      <a href="behandlingar/vaxning.html" class="service-card">
+        <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=800&amp;q=80&amp;fm=webp&amp;fit=crop&amp;auto=format" alt="Vaxningsbehandling" loading="lazy" decoding="async" class="service-card__img" />
+        <span class="service-card__overlay" aria-hidden="true"></span>
+        <div class="service-card__content">
+          <h3 class="service-card__title">Vaxning</h3>
+          <p class="service-card__desc">Kropps- och ansiktsvaxning med precision.</p>
+          <span class="service-card__cta">Från 295 kr
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
         </div>
       </a>
 
-      <a href="behandlingar/paket.html" class="tile-card" style="scroll-snap-align:start;min-width:280px;max-width:320px;flex-shrink:0;border-radius:16px;overflow:hidden;position:relative;display:block;text-decoration:none;color:inherit;box-shadow:0 2px 16px rgba(0,0,0,0.08);transition:transform 0.3s,box-shadow 0.3s;margin-right:24px;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.12)'" onmouseleave="this.style.transform='';this.style.boxShadow='0 2px 16px rgba(0,0,0,0.08)'">
-        <div style="aspect-ratio:4/3;overflow:hidden"><img src="img/hot-stone.jpg" alt="Behandlingspaket" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block" /></div>
-        <div style="padding:20px;background:var(--white)">
-          <h3 style="font-family:var(--font-serif);font-size:1.15rem;margin:0 0 6px">Paket</h3>
-          <p style="font-size:0.85rem;color:#777;margin:0 0 10px">Kombinera behandlingar och spara</p>
-          <span style="font-size:0.85rem;font-weight:600;color:var(--color-red)">Från 1 040 kr</span>
+      <a href="behandlingar/paket.html" class="service-card">
+        <img src="img/hot-stone.jpg" alt="Behandlingspaket på Cutie Spa" loading="lazy" decoding="async" class="service-card__img" />
+        <span class="service-card__overlay" aria-hidden="true"></span>
+        <div class="service-card__content">
+          <h3 class="service-card__title">Paket</h3>
+          <p class="service-card__desc">Kombinera flera behandlingar och spara på din helupplevelse.</p>
+          <span class="service-card__cta">Från 1 040 kr
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
         </div>
       </a>
 
     </div>
+  </div>
+
+  <div class="container">
+    <div class="services-carousel__dots" id="servicesDots" role="tablist" aria-label="Behandlingsindikatorer"></div>
   </div>
 </section>
 
@@ -1152,6 +1189,72 @@
 
 
 <script src="js/main.js" defer></script>
+<script defer>
+  // Services carousel — arrows + dots + smooth scroll
+  document.addEventListener('DOMContentLoaded', function () {
+    var track = document.getElementById('servicesTrack');
+    var dotsWrap = document.getElementById('servicesDots');
+    var prevBtn = document.querySelector('[data-services-nav="prev"]');
+    var nextBtn = document.querySelector('[data-services-nav="next"]');
+    if (!track || !dotsWrap || !prevBtn || !nextBtn) return;
+
+    var cards = Array.prototype.slice.call(track.children);
+    if (!cards.length) return;
+
+    function pad() {
+      var v = getComputedStyle(track).scrollPaddingInlineStart || getComputedStyle(track).scrollPaddingLeft || '0';
+      return parseFloat(v) || 0;
+    }
+
+    function scrollToIndex(i) {
+      var target = cards[i];
+      if (!target) return;
+      track.scrollTo({ left: target.offsetLeft - pad(), behavior: 'smooth' });
+    }
+
+    function activeIndex() {
+      var x = track.scrollLeft + pad();
+      var best = 0, min = Infinity;
+      for (var k = 0; k < cards.length; k++) {
+        var d = Math.abs(cards[k].offsetLeft - x);
+        if (d < min) { min = d; best = k; }
+      }
+      return best;
+    }
+
+    function update() {
+      var i = activeIndex();
+      for (var k = 0; k < dots.length; k++) {
+        dots[k].classList.toggle('services-carousel__dot--active', k === i);
+      }
+      prevBtn.disabled = track.scrollLeft <= 1;
+      nextBtn.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 1;
+    }
+
+    // Build dots
+    var dots = [];
+    cards.forEach(function (_, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'services-carousel__dot';
+      b.setAttribute('aria-label', 'Gå till behandling ' + (i + 1));
+      b.addEventListener('click', function () { scrollToIndex(i); });
+      dotsWrap.appendChild(b);
+      dots.push(b);
+    });
+
+    prevBtn.addEventListener('click', function () { scrollToIndex(Math.max(0, activeIndex() - 1)); });
+    nextBtn.addEventListener('click', function () { scrollToIndex(Math.min(cards.length - 1, activeIndex() + 1)); });
+
+    var t;
+    track.addEventListener('scroll', function () {
+      clearTimeout(t);
+      t = setTimeout(update, 60);
+    }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+</script>
 <script>
   // Friskvård popup — visas efter 2 sek, stängs automatiskt efter 8 sek
   setTimeout(function(){
