@@ -1018,6 +1018,93 @@
   }
 }
 
+/* ── Salon overview grid (om-oss-page) ─────────────────── */
+.salons__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1100px) {
+  .salons__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .salons__grid { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
+}
+
+.salon-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  transition: transform var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out);
+  display: flex;
+  flex-direction: column;
+}
+
+.salon-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.salon-card__image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-beige);
+}
+
+.salon-card__image img {
+  transition: transform 600ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.salon-card:hover .salon-card__image img {
+  transform: scale(1.05);
+}
+
+.salon-card__body {
+  padding: 20px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.salon-card__name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-near-black);
+  margin: 0 0 4px;
+}
+
+.salon-card__address,
+.salon-card__phone {
+  font-size: 0.875rem;
+  color: var(--color-warm-gray);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.salon-card__phone {
+  font-variant-numeric: tabular-nums;
+}
+
+.salon-card__link {
+  margin-top: auto;
+  padding-top: 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-red);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.salon-card__link:hover { color: var(--color-red-dark, var(--color-red)); }
+
 /* ── 10. FRISKVÅRD-SEKTION ─────────────────────────────── */
 
 .friskvard {
