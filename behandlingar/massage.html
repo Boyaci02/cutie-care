@@ -12,43 +12,70 @@
 </head>
 <body>
 
-<nav class="nav" id="main-nav">
+<nav class="nav" id="main-nav" aria-label="Huvudnavigation">
   <div class="container">
     <div class="nav__inner">
-      <a href="../index.html" class="nav__logo">Cutie Care<span>Skönhet &amp; Massage</span></a>
-      <ul class="nav__links">
+      <a href="../index.html" class="nav__logo" aria-label="Cutie Care – Startsida">
+        <img src="../img/logo-cutiecare.jpg" alt="Cutie Care" class="nav__logo-img" />
+      </a>
+
+      <ul class="nav__links" role="list">
         <li><a href="../index.html" class="nav__link">Hem</a></li>
-        <li class="nav__item"><a href="#" class="nav__link" style="color:var(--red)">Behandlingar ▾</a>
-          <div class="nav__dropdown">
-            <a href="manikyr.html">Manikyr</a>
-            <a href="pedikyr.html">Pedikyr &amp; Fotvård</a>
-            <a href="massage.html">Massage</a>
-            <a href="spa.html">Spa</a>
-            <a href="ogonfransar.html">Ögonfransar &amp; Ögonbryn</a>
-            <a href="vaxning.html">Vaxning</a>
-            <a href="bastu.html">Bastubehandling</a>
-            <a href="paket.html">Paketbehandlingar</a>
+
+        <li class="nav__item">
+          <a href="../index.html#tjanster" class="nav__link is-active" aria-haspopup="true">Behandlingar ▾</a>
+          <div class="nav__dropdown" role="menu">
+            <a href="../behandlingar/massage.html" role="menuitem">Massage</a>
+            <a href="../behandlingar/manikyr.html" role="menuitem">Manikyr &amp; Nagelvård</a>
+            <a href="../behandlingar/pedikyr.html" role="menuitem">Pedikyr &amp; Fotvård</a>
+            <a href="../behandlingar/spa.html" role="menuitem">Spa &amp; Ansiktsbehandling</a>
+            <a href="../behandlingar/ogonfransar.html" role="menuitem">Ögonfransar &amp; Ögonbryn</a>
+            <a href="../behandlingar/vaxning.html" role="menuitem">Vaxning</a>
+            <a href="../behandlingar/bastu.html" role="menuitem">Infraröd Bastu</a>
+            <a href="../behandlingar/paket.html" role="menuitem">Paketbehandlingar</a>
           </div>
         </li>
+
+        <li class="nav__item">
+          <a href="../index.html#salonger" class="nav__link" aria-haspopup="true">Salonger ▾</a>
+          <div class="nav__dropdown" role="menu">
+            <a href="../salonger/mall-of-scandinavia.html" role="menuitem">Mall of Scandinavia</a>
+            <a href="../salonger/danderyd.html" role="menuitem">Danderyd</a>
+            <a href="../salonger/taby.html" role="menuitem">Täby</a>
+            <a href="../salonger/nacka-forum.html" role="menuitem">Nacka Forum</a>
+          </div>
+        </li>
+
         <li><a href="../friskvard.html" class="nav__link">Friskvård</a></li>
         <li><a href="../prislista.html" class="nav__link">Prislista</a></li>
         <li><a href="../om-oss.html" class="nav__link">Om Oss</a></li>
       </ul>
-      <a href="../boka.html" class="btn btn-primary nav__cta">Boka Tid</a>
-      <button class="nav__hamburger" id="hamburger" aria-label="Öppna meny" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+
+      <div class="nav__right">
+        <a href="../boka.html" class="btn nav__cta">Boka Tid</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Öppna meny" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </div>
 </nav>
 
-<div class="nav__mobile" id="mobile-menu">
+<div class="nav__mobile" id="mobile-menu" role="dialog" aria-label="Mobilmeny" aria-modal="true">
   <a href="../index.html">Hem</a>
-  <a href="../index.html#behandlingar">Behandlingar</a>
+  <a href="../behandlingar/massage.html">Massage</a>
+  <a href="../behandlingar/manikyr.html">Manikyr</a>
+  <a href="../behandlingar/pedikyr.html">Pedikyr</a>
+  <a href="../behandlingar/spa.html">Spa</a>
+  <a href="../behandlingar/ogonfransar.html">Ögonfransar</a>
+  <a href="../behandlingar/vaxning.html">Vaxning</a>
+  <a href="../behandlingar/bastu.html">Infraröd Bastu</a>
+  <a href="../behandlingar/paket.html">Paket</a>
+  <a href="../index.html#salonger">Salonger</a>
   <a href="../friskvard.html">Friskvård</a>
   <a href="../prislista.html">Prislista</a>
   <a href="../om-oss.html">Om Oss</a>
-  <a href="../boka.html" class="btn btn-primary" style="margin-top:16px">Boka Tid</a>
+  <a href="../boka.html" class="btn" style="margin-top:24px;justify-content:center">Boka Tid</a>
 </div>
 
 <!-- HERO -->
