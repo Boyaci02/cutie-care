@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/sections.css" />
 </head>
-<body>
+<body class="home">
 
 <nav class="nav" id="main-nav" aria-label="Huvudnavigation">
   <div class="container">
@@ -83,24 +83,29 @@
   <a href="boka.html" class="btn" style="margin-top:24px;justify-content:center">Boka Tid</a>
 </div>
 
-<!-- HERO -->
-<section class="page-hero">
-  <div class="page-hero__inner container">
-    <div class="page-hero__icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
-    <h1>Jobba Hos Oss</h1>
-    <p>Bli en del av Cutie Care-familjen</p>
-    <nav class="breadcrumb"><a href="index.html">Hem</a><span>&#8250;</span><span>Jobba Hos Oss</span></nav>
+<!-- HERO (light) -->
+<section class="friskvard-hero" style="text-align:center">
+  <div class="container">
+    <div class="friskvard-hero__inner" style="max-width:760px;margin-inline:auto" data-jobba-hero>
+      <span class="section-label">Karriär hos Cutie Care</span>
+      <h1 style="text-align:center">Jobba <em>hos oss</em></h1>
+      <p class="friskvard-hero__lead" style="margin-inline:auto">Bli en del av Cutie Care-familjen — vi söker engagerade medarbetare till våra fyra salonger i Stockholm. Massageterapeuter, nagelteknologer och receptionister välkomna.</p>
+      <div class="friskvard-hero__cta" style="justify-content:center">
+        <a href="#ansok" class="btn btn-primary">Skicka ansökan</a>
+        <a href="mailto:info@cutiecare.se" class="btn btn-outline-red">Mejla oss</a>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- INTRO -->
-<section style="background:var(--off-white);padding:80px 0">
+<section style="background:var(--color-cream);padding:64px 0">
   <div class="container">
     <div style="max-width:720px;margin:0 auto;text-align:center" class="fade-in">
-      <span class="section-label">Karriär</span>
-      <h2>Vi söker <em>dig</em></h2>
-      <p style="color:#555;margin:20px 0 40px;font-size:1.05rem;line-height:1.7">
-        Cutie Care växer och vi letar alltid efter engagerade medarbetare som delar vår passion för skönhet och välmående. Vi erbjuder en varm arbetsmiljö, flexibla tider och möjlighet att växa inom företaget.
+      <span class="section-label">Vi söker</span>
+      <h2>Vad vi <em>letar efter</em></h2>
+      <p style="color:var(--color-warm-gray);margin:20px 0 40px;font-size:1.05rem;line-height:1.7">
+        Cutie Care växer och vi letar alltid efter engagerade medarbetare som delar vår passion för skönhet och välmående. Vi erbjuder varm arbetsmiljö, flexibla tider och möjlighet att växa inom företaget.
       </p>
     </div>
 
