@@ -76,17 +76,107 @@
   <a href="boka.html" class="btn" style="margin-top:24px;justify-content:center">Boka Tid</a>
 </div>
 
-<!-- HERO (light, no dark page-hero) -->
+<!-- HERO (2-col: text left, partner-dropdowns right) -->
 <section class="friskvard-hero">
   <div class="container">
-    <div class="friskvard-hero__inner fade-in">
-      <span class="section-label">Friskvård hos Cutie Care</span>
-      <h1>Förläng din <em>friskvård</em></h1>
-      <p class="friskvard-hero__lead">Använd ditt friskvårdsbidrag hos oss för massage och fotvård — upp till 1 000 kr per tillfälle. Vi accepterar fem av Sveriges största friskvårdspartners.</p>
-      <div class="friskvard-hero__cta">
-        <a href="https://shop.cutiecare.se/product/friskvard/" class="btn btn-primary" target="_blank" rel="noopener">Köp Friskvårdskort</a>
-        <a href="#partners" class="btn btn-outline-red">Se hur det fungerar</a>
+    <div class="friskvard-hero__grid">
+
+      <div class="friskvard-hero__text fade-in">
+        <span class="section-label">Friskvård hos Cutie Care</span>
+        <h1>Förläng din <em>friskvård</em></h1>
+        <p class="friskvard-hero__lead">Använd ditt friskvårdsbidrag hos oss för massage och fotvård — upp till 1 000 kr per tillfälle. Vi accepterar fem av Sveriges största friskvårdspartners. Välj din partner till höger för steg-för-steg-instruktioner.</p>
+        <div class="friskvard-hero__cta">
+          <a href="https://shop.cutiecare.se/product/friskvard/" class="btn btn-primary" target="_blank" rel="noopener">Köp Friskvårdskort</a>
+          <a href="#behandlingar" class="btn btn-outline-red">Se behandlingar</a>
+        </div>
       </div>
+
+      <div class="friskvard-hero__accordion fade-in fade-in-delay-2">
+        <div class="partner-accordion">
+
+          <div class="partner-acc__item">
+            <button class="partner-acc__header" type="button">
+              <img class="partner-acc__logo" src="img/friskvard-benifex.webp" alt="Benifex" />
+              <span class="partner-acc__name">Benifex</span>
+              <span class="partner-acc__toggle">+</span>
+            </button>
+            <div class="partner-acc__body">
+              <ol>
+                <li>Logga in på förmånsportalen.</li>
+                <li>Under "Mina förmåner" → "Friskvård" → sök Cutie Care.</li>
+                <li>Beställ direkt (bidraget dras automatiskt) eller registrera kvitto.</li>
+                <li>Visa upp din bekräftelsekod i kassan i salongen.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="partner-acc__item">
+            <button class="partner-acc__header" type="button">
+              <img class="partner-acc__logo" src="img/friskvard-epassi.webp" alt="Epassi" />
+              <span class="partner-acc__name">Epassi</span>
+              <span class="partner-acc__toggle">+</span>
+            </button>
+            <div class="partner-acc__body">
+              <ol>
+                <li>Ladda ner ePassi-appen och registrera dig.</li>
+                <li>Sök Cutie Care i appen och beställ behandling.</li>
+                <li>Boka tid via bokadirekt.se.</li>
+                <li>Visa legitimation, betala via appen och visa köpbekräftelsen.</li>
+                <li>Visa upp din bekräftelsekod i kassan i salongen.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="partner-acc__item">
+            <button class="partner-acc__header" type="button">
+              <img class="partner-acc__logo" src="img/friskvard-wellnet.webp" alt="Wellnet" />
+              <span class="partner-acc__name">Wellnet</span>
+              <span class="partner-acc__toggle">+</span>
+            </button>
+            <div class="partner-acc__body">
+              <ol>
+                <li>Gå till wellnet.se.</li>
+                <li>Sök Cutie Care och gör din beställning.</li>
+                <li>Boka via bokadirekt.se (ange "Wellness" i kommentarsfältet).</li>
+                <li>Visa legitimation vid betalning i salongen.</li>
+                <li>Visa upp din bekräftelsekod i kassan.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="partner-acc__item">
+            <button class="partner-acc__header" type="button">
+              <img class="partner-acc__logo" src="img/friskvard-soderberg.webp" alt="Söderberg &amp; Partners" />
+              <span class="partner-acc__name">Söderberg &amp; Partners</span>
+              <span class="partner-acc__toggle">+</span>
+            </button>
+            <div class="partner-acc__body">
+              <ol>
+                <li>Beställ via Söderberg &amp; Partners portal.</li>
+                <li>Boka tid via bokadirekt.se.</li>
+                <li>Visa legitimation vid betalning i salongen.</li>
+                <li>Visa upp din bekräftelsekod i kassan.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="partner-acc__item">
+            <button class="partner-acc__header" type="button">
+              <img class="partner-acc__logo" src="img/friskvard-edenred.webp" alt="Edenred" />
+              <span class="partner-acc__name">Edenred</span>
+              <span class="partner-acc__toggle">+</span>
+            </button>
+            <div class="partner-acc__body">
+              <ol>
+                <li>Boka din behandling i förväg via bokadirekt.se.</li>
+                <li>Betala på plats i salongen med ditt Edenred-kort.</li>
+              </ol>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -104,120 +194,6 @@
     <img src="img/friskvard-wellnet.webp" alt="" aria-hidden="true" />
     <img src="img/friskvard-soderberg.webp" alt="" aria-hidden="true" />
     <img src="img/friskvard-edenred.webp" alt="" aria-hidden="true" />
-  </div>
-</section>
-
-<!-- HOW IT WORKS + PARTNERS (combined) -->
-<section id="partners" style="background:var(--color-cream);padding:80px 0">
-  <div class="container">
-
-    <div class="friskvard-how__header fade-in">
-      <span class="section-label">Så enkelt går det till</span>
-      <h2>Använd ditt <em>friskvårdsbidrag</em> hos oss</h2>
-      <p style="color:var(--color-warm-gray);max-width:600px;margin:14px auto 0;line-height:1.6">Tre steg — sen är du på behandlingsbordet. Välj din friskvårdspartner nedan för exakta instruktioner.</p>
-    </div>
-
-    <div class="friskvard-how__steps fade-in">
-      <div class="friskvard-how__step">
-        <div class="friskvard-how__num">1</div>
-        <h3>Beställ via din partner</h3>
-        <p>Logga in på din friskvårdspartners portal eller app och beställ en behandling hos Cutie Care.</p>
-      </div>
-      <div class="friskvard-how__step">
-        <div class="friskvard-how__num">2</div>
-        <h3>Boka din tid</h3>
-        <p>Välj salong och tid via bokadirekt.se eller direkt i din partners app.</p>
-      </div>
-      <div class="friskvard-how__step">
-        <div class="friskvard-how__num">3</div>
-        <h3>Visa upp i salongen</h3>
-        <p>Visa legitimation och din bekräftelsekod i kassan — vi sköter resten.</p>
-      </div>
-    </div>
-
-    <div class="partner-accordion fade-in">
-
-      <div class="partner-acc__item">
-        <button class="partner-acc__header" type="button">
-          <img class="partner-acc__logo" src="img/friskvard-benifex.webp" alt="Benifex" />
-          <span class="partner-acc__name">Benifex</span>
-          <span class="partner-acc__toggle">+</span>
-        </button>
-        <div class="partner-acc__body">
-          <ol>
-            <li>Logga in på förmånsportalen.</li>
-            <li>Under "Mina förmåner" → "Friskvård" → sök Cutie Care.</li>
-            <li>Beställ direkt (bidraget dras automatiskt) eller registrera kvitto.</li>
-            <li>Visa upp din bekräftelsekod i kassan i salongen.</li>
-          </ol>
-        </div>
-      </div>
-
-      <div class="partner-acc__item">
-        <button class="partner-acc__header" type="button">
-          <img class="partner-acc__logo" src="img/friskvard-epassi.webp" alt="Epassi" />
-          <span class="partner-acc__name">Epassi</span>
-          <span class="partner-acc__toggle">+</span>
-        </button>
-        <div class="partner-acc__body">
-          <ol>
-            <li>Ladda ner ePassi-appen och registrera dig.</li>
-            <li>Sök Cutie Care i appen och beställ behandling.</li>
-            <li>Boka tid via bokadirekt.se.</li>
-            <li>Visa legitimation, betala via appen och visa köpbekräftelsen.</li>
-            <li>Visa upp din bekräftelsekod i kassan i salongen.</li>
-          </ol>
-        </div>
-      </div>
-
-      <div class="partner-acc__item">
-        <button class="partner-acc__header" type="button">
-          <img class="partner-acc__logo" src="img/friskvard-wellnet.webp" alt="Wellnet" />
-          <span class="partner-acc__name">Wellnet</span>
-          <span class="partner-acc__toggle">+</span>
-        </button>
-        <div class="partner-acc__body">
-          <ol>
-            <li>Gå till wellnet.se.</li>
-            <li>Sök Cutie Care och gör din beställning.</li>
-            <li>Boka via bokadirekt.se (ange "Wellness" i kommentarsfältet).</li>
-            <li>Visa legitimation vid betalning i salongen.</li>
-            <li>Visa upp din bekräftelsekod i kassan.</li>
-          </ol>
-        </div>
-      </div>
-
-      <div class="partner-acc__item">
-        <button class="partner-acc__header" type="button">
-          <img class="partner-acc__logo" src="img/friskvard-soderberg.webp" alt="Söderberg &amp; Partners" />
-          <span class="partner-acc__name">Söderberg &amp; Partners</span>
-          <span class="partner-acc__toggle">+</span>
-        </button>
-        <div class="partner-acc__body">
-          <ol>
-            <li>Beställ via Söderberg &amp; Partners portal.</li>
-            <li>Boka tid via bokadirekt.se.</li>
-            <li>Visa legitimation vid betalning i salongen.</li>
-            <li>Visa upp din bekräftelsekod i kassan.</li>
-          </ol>
-        </div>
-      </div>
-
-      <div class="partner-acc__item">
-        <button class="partner-acc__header" type="button">
-          <img class="partner-acc__logo" src="img/friskvard-edenred.webp" alt="Edenred" />
-          <span class="partner-acc__name">Edenred</span>
-          <span class="partner-acc__toggle">+</span>
-        </button>
-        <div class="partner-acc__body">
-          <ol>
-            <li>Boka din behandling i förväg via bokadirekt.se.</li>
-            <li>Betala på plats i salongen med ditt Edenred-kort.</li>
-          </ol>
-        </div>
-      </div>
-
-    </div>
   </div>
 </section>
 

@@ -2095,18 +2095,28 @@
 /* ── Friskvård hero (light) ───────────────────────────── */
 .friskvard-hero {
   background: var(--color-cream);
-  padding: 200px 0 80px;
-  text-align: center;
+  padding: 180px 0 80px;
 }
 
 @media (max-width: 768px) {
-  .friskvard-hero { padding: 160px 0 56px; }
+  .friskvard-hero { padding: 150px 0 56px; }
 }
 
-.friskvard-hero__inner {
-  max-width: 760px;
-  margin-inline: auto;
+.friskvard-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
 }
+
+@media (max-width: 900px) {
+  .friskvard-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.friskvard-hero__text { max-width: 540px; }
 
 .friskvard-hero h1 {
   font-family: var(--font-serif);
@@ -2127,15 +2137,22 @@
   font-size: var(--fs-body-lg);
   line-height: 1.6;
   color: var(--color-warm-gray);
-  margin: 0 auto 32px;
-  max-width: 600px;
+  margin: 0 0 32px;
+  max-width: 540px;
 }
 
 .friskvard-hero__cta {
   display: inline-flex;
   gap: 14px;
   flex-wrap: wrap;
-  justify-content: center;
+}
+
+.friskvard-hero h1 { text-align: left; }
+.friskvard-hero .section-label { display: inline-block; }
+
+.friskvard-hero__accordion .partner-accordion {
+  max-width: none;
+  margin: 0;
 }
 
 /* ── Partner accordion v2 (with logos) ────────────────── */
