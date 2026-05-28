@@ -12,12 +12,45 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.getElementById('main-nav');
 
   if (nav) {
-    const onScroll = () => {
-      if (window.scrollY > 60) nav.classList.add('scrolled');
+    let lastY = window.scrollY;
+    let ticking = false;
+    const SCROLL_DELTA = 6;     // ignore tiny jitter
+    const HIDE_AFTER = 140;     // only hide once we've scrolled past this
+    const SHOW_NEAR_TOP = 60;   // always show at top
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    const apply = () => {
+      const y = window.scrollY;
+      const delta = y - lastY;
+
+      // Background style (existing behavior)
+      if (y > 60) nav.classList.add('scrolled');
       else nav.classList.remove('scrolled');
+
+      // Hide on scroll down, show on scroll up
+      const menuOpen = mobileMenu && mobileMenu.classList.contains('open');
+      if (y <= SHOW_NEAR_TOP || menuOpen) {
+        nav.classList.remove('nav--hidden');
+      } else if (Math.abs(delta) > SCROLL_DELTA) {
+        if (delta > 0 && y > HIDE_AFTER) {
+          nav.classList.add('nav--hidden');
+        } else if (delta < 0) {
+          nav.classList.remove('nav--hidden');
+        }
+        lastY = y;
+      }
+      ticking = false;
     };
+
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(apply);
+      }
+    };
+
     window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+    apply();
   }
 
   /* ── 2. HAMBURGER MENY ──────────────────────────────────── */
