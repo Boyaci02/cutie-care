@@ -50,13 +50,13 @@ body:not(.home) .nav {
 
 body:not(.home) main > section:first-child,
 body:not(.home) > section:first-of-type {
-  padding-top: 140px;
+  padding-top: 200px;
 }
 
 @media (max-width: 768px) {
   body:not(.home) main > section:first-child,
   body:not(.home) > section:first-of-type {
-    padding-top: 120px;
+    padding-top: 160px;
   }
 }
 
