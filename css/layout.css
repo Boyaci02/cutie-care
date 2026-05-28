@@ -40,6 +40,7 @@
   line-height: 1.1;
   color: var(--color-white);
   text-decoration: none;
+  transition: color var(--dur-base) var(--ease-out);
 }
 
 .nav__logo em {
@@ -49,6 +50,7 @@
   font-weight: 500;
   letter-spacing: 0.005em;
   color: var(--color-white);
+  transition: color var(--dur-base) var(--ease-out);
 }
 
 .nav__logo-img {
@@ -65,6 +67,7 @@
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.55);
   margin-top: 2px;
+  transition: color var(--dur-base) var(--ease-out);
 }
 
 .nav__links {
@@ -99,6 +102,15 @@
 .nav__link:hover::after,
 .nav__link.is-active::after { width: 100%; }
 .nav__link.is-active { color: var(--color-white); }
+
+/* Home page — light hero, dark nav text by default.
+   Scrolled state (.nav.scrolled) still gets dark bg + white text from the base rules. */
+body.home .nav:not(.scrolled) .nav__logo,
+body.home .nav:not(.scrolled) .nav__logo em { color: var(--color-dark); }
+body.home .nav:not(.scrolled) .nav__logo span { color: rgba(61, 43, 31, 0.6); }
+body.home .nav:not(.scrolled) .nav__link { color: var(--color-dark); }
+body.home .nav:not(.scrolled) .nav__link:hover,
+body.home .nav:not(.scrolled) .nav__link.is-active { color: var(--color-red); }
 
 .nav__item { position: relative; }
 
@@ -172,8 +184,10 @@
   display: block;
   width: 22px; height: 1.5px;
   background: var(--color-white);
-  transition: transform var(--dur-base) var(--ease-out), opacity var(--dur-base) var(--ease-out);
+  transition: transform var(--dur-base) var(--ease-out), opacity var(--dur-base) var(--ease-out), background var(--dur-base) var(--ease-out);
 }
+
+body.home .nav:not(.scrolled) .nav__hamburger span { background: var(--color-dark); }
 
 .nav__hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(4px, 4.5px); }
 .nav__hamburger.active span:nth-child(2) { opacity: 0; }
