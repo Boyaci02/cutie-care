@@ -1105,6 +1105,105 @@
 
 .salon-card__link:hover { color: var(--color-red-dark, var(--color-red)); }
 
+/* ── Treatment pricelist (inline on each behandling-sida) ── */
+.treatment-pricelist {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--color-border);
+}
+
+.treatment-pricelist__heading {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-warm-gray);
+  margin: 0 0 14px;
+  font-weight: 600;
+}
+
+.treatment-pricelist__row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.treatment-pricelist__row:last-of-type { border-bottom: none; }
+
+.treatment-pricelist__name {
+  flex: 1;
+  font-size: 0.95rem;
+  color: var(--color-near-black);
+  font-weight: 500;
+  line-height: 1.4;
+  min-width: 0;
+}
+
+.treatment-pricelist__friskvard {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-red);
+  background: var(--color-red-soft);
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: 2px;
+  white-space: nowrap;
+}
+
+.treatment-pricelist__meta {
+  font-size: 0.8rem;
+  color: var(--color-warm-gray);
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.treatment-pricelist__price {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-red);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.treatment-pricelist__boka {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-gold);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast) var(--ease-out);
+}
+
+.treatment-pricelist__boka:hover {
+  color: var(--color-red);
+  border-bottom-color: var(--color-red);
+}
+
+.treatment-pricelist__footnote {
+  margin-top: 14px;
+  font-size: 0.72rem;
+  color: var(--color-warm-gray);
+}
+
+@media (max-width: 600px) {
+  .treatment-pricelist__row {
+    flex-wrap: wrap;
+    gap: 6px 14px;
+  }
+  .treatment-pricelist__name { flex-basis: 100%; }
+}
+
 /* ── 10. FRISKVÅRD-SEKTION ─────────────────────────────── */
 
 .friskvard {
