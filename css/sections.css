@@ -2095,11 +2095,17 @@
 /* ── Friskvård hero (light) ───────────────────────────── */
 .friskvard-hero {
   background: var(--color-cream);
-  padding: 180px 0 80px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 140px 0 64px;
 }
 
 @media (max-width: 768px) {
-  .friskvard-hero { padding: 150px 0 56px; }
+  .friskvard-hero {
+    min-height: auto;
+    padding: 130px 0 56px;
+  }
 }
 
 .friskvard-hero__grid {
