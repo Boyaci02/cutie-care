@@ -1308,16 +1308,14 @@
 
 <script>
 (function(){
-  var KEY='cc_morsdag_2026_seen';
+  // Visas vid VARJE sidladdning/uppdatering (ingen once-per-besökare-spärr). Döljs efter mors dag.
   var DEADLINE=new Date('2026-06-01T00:00:00+02:00');
   if(new Date()>=DEADLINE) return;
-  if(localStorage.getItem(KEY)==='1') return;
   var el=document.getElementById('cc-morsdag');
   if(!el) return;
   function open(){el.classList.add('is-open');}
-  function close(){el.classList.remove('is-open');localStorage.setItem(KEY,'1');}
+  function close(){el.classList.remove('is-open');}
   el.querySelectorAll('[data-ccmd-close]').forEach(function(b){b.addEventListener('click',close);});
-  el.querySelectorAll('[data-ccmd-cta]').forEach(function(b){b.addEventListener('click',function(){localStorage.setItem(KEY,'1');});});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
   setTimeout(open,1600);
 })();
