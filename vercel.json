@@ -1,4 +1,14 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/locations", "destination": "/salonger/mall-of-scandinavia", "permanent": true },
+    { "source": "/locations/", "destination": "/salonger/mall-of-scandinavia", "permanent": true },
+    { "source": "/cutie-spa-nacka-forum", "destination": "/salonger/nacka-forum", "permanent": true },
+    { "source": "/cutie-spa-nacka-forum/", "destination": "/salonger/nacka-forum", "permanent": true },
+    { "source": "/cutie-spa-taby", "destination": "/salonger/taby", "permanent": true },
+    { "source": "/cutie-spa-taby/", "destination": "/salonger/taby", "permanent": true },
+    { "source": "/blissful-danderyd", "destination": "/salonger/danderyd", "permanent": true },
+    { "source": "/blissful-danderyd/", "destination": "/salonger/danderyd", "permanent": true }
+  ]
 }
