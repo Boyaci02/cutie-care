@@ -2,6 +2,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
+    { "source": "/cutie-spa-mall-of-scandinavia", "destination": "/salonger/mall-of-scandinavia", "permanent": true },
+    { "source": "/cutie-spa-mall-of-scandinavia/", "destination": "/salonger/mall-of-scandinavia", "permanent": true },
     { "source": "/locations", "destination": "/salonger/mall-of-scandinavia", "permanent": true },
     { "source": "/locations/", "destination": "/salonger/mall-of-scandinavia", "permanent": true },
     { "source": "/cutie-spa-nacka-forum", "destination": "/salonger/nacka-forum", "permanent": true },
