@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --beige:#F5EDE3;--cream:#FAFAF7;--gold:#B8956A;--dark:#3D2B1F;
+    --dark-deep:#2A1C14;--red:#C41E3A;--red-dark:#8B1525;--warm:#8A7E78;
+    --serif:'Cormorant Garamond',serif;--sans:'Inter',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1080px;height:1350px;}
+  .card{position:relative;width:1080px;height:1350px;overflow:hidden;background:var(--beige);
+    font-family:var(--sans);color:var(--dark);}
+  .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;}
+  /* very light top wash to keep beige calm + tiny bottom lift for the CTA */
+  .wash{position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(238,228,214,.55) 0%, rgba(238,228,214,.10) 20%, rgba(238,228,214,0) 34%),
+               linear-gradient(0deg, rgba(42,28,20,.30) 0%, rgba(42,28,20,0) 16%);}
+  .frame{position:absolute;inset:34px;border:1.5px solid rgba(184,149,106,.55);pointer-events:none;}
+
+  .top{position:absolute;top:60px;left:0;right:0;display:flex;flex-direction:column;align-items:center;gap:22px;}
+  .logo-img{height:118px;width:auto;display:block;filter:drop-shadow(0 2px 8px rgba(42,28,20,.18));}
+  .eyebrow{display:flex;align-items:center;gap:15px;font-weight:500;letter-spacing:.34em;font-size:17px;
+    color:var(--dark);text-transform:uppercase;}
+  .eyebrow::before,.eyebrow::after{content:"";width:40px;height:1px;background:var(--gold);}
+
+  .head{position:absolute;top:268px;left:0;right:0;text-align:center;padding:0 90px;}
+  .head h1{font-family:var(--serif);font-weight:500;font-size:98px;line-height:.93;letter-spacing:-1px;color:var(--dark-deep);}
+  .head h1 em{font-style:italic;color:var(--red-dark);}
+  .head p{margin-top:14px;font-family:var(--serif);font-style:italic;font-weight:400;font-size:34px;
+    line-height:1.3;color:var(--dark);opacity:.9;}
+
+  .bottom{position:absolute;left:0;right:0;bottom:78px;display:flex;flex-direction:column;align-items:center;gap:18px;padding:0 90px;}
+  .cta{display:inline-flex;align-items:center;gap:16px;background:var(--red-dark);color:#fff;font-weight:600;
+    letter-spacing:.14em;font-size:21px;text-transform:uppercase;padding:20px 46px;border-radius:2px;
+    box-shadow:0 16px 40px rgba(42,28,20,.4);}
+  .cta span{font-weight:300;opacity:.65;}
+  .fine{font-size:16px;letter-spacing:.05em;color:#fff;opacity:.9;text-shadow:0 1px 6px rgba(42,28,20,.5);}
+</style>
+</head>
+<body>
+  <div class="card">
+    <img class="photo" src="ai.png" alt="" />
+    <div class="wash"></div>
+    <div class="frame"></div>
+
+    <div class="top">
+      <img class="logo-img" src="logo.png" alt="Cutie Care" />
+      <div class="eyebrow">Mors dag · 31 maj</div>
+    </div>
+
+    <div class="head">
+      <h1>Skäm bort<br /><em>mamma</em></h1>
+      <p>en present hon minns</p>
+    </div>
+
+    <div class="bottom">
+      <div class="cta">Ge mamma ett presentkort <span>·</span> cutiecare.se</div>
+      <div class="fine">Täby · Solna · Danderyd · Nacka Forum · Saltsjöbaden</div>
+    </div>
+  </div>
+</body>
+</html>

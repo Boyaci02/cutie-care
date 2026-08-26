@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --beige:#F5EDE3; --cream:#FAFAF7; --gold:#B8956A; --dark:#3D2B1F;
+    --dark-deep:#2A1C14; --red:#C41E3A; --red-dark:#8B1525; --warm:#8A7E78;
+    --serif:'Cormorant Garamond',serif; --sans:'Inter',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1080px;height:1350px;}
+  .card{
+    position:relative;width:1080px;height:1350px;overflow:hidden;
+    background:var(--beige);font-family:var(--sans);color:var(--dark);
+  }
+  .photo{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    object-position:50% 42%;
+  }
+  /* warm wash so brand tone is consistent + top is calm, bottom readable */
+  .wash{
+    position:absolute;inset:0;
+    background:
+      linear-gradient(180deg, rgba(245,237,227,0.72) 0%, rgba(245,237,227,0.20) 26%, rgba(245,237,227,0) 44%),
+      linear-gradient(0deg, rgba(42,28,20,0.78) 0%, rgba(42,28,20,0.34) 22%, rgba(42,28,20,0) 46%);
+  }
+  /* hairline frame */
+  .frame{position:absolute;inset:34px;border:1.5px solid rgba(184,149,106,.55);pointer-events:none;}
+
+  /* ---- top brand + eyebrow ---- */
+  .top{position:absolute;top:78px;left:0;right:0;display:flex;flex-direction:column;align-items:center;gap:26px;}
+  .seal{display:flex;flex-direction:column;align-items:center;gap:10px;}
+  .seal__mark{
+    width:58px;height:58px;border:2px solid var(--red);border-radius:8px;
+    display:flex;align-items:center;justify-content:center;color:var(--red);
+    font-family:var(--serif);font-weight:600;font-size:30px;line-height:1;
+  }
+  .seal__name{font-family:var(--sans);font-weight:600;letter-spacing:.42em;font-size:17px;color:var(--red);padding-left:.42em;}
+  .eyebrow{
+    display:flex;align-items:center;gap:16px;font-weight:500;letter-spacing:.34em;
+    font-size:18px;color:var(--dark);text-transform:uppercase;
+  }
+  .eyebrow::before,.eyebrow::after{content:"";width:42px;height:1px;background:var(--gold);}
+
+  /* ---- headline ---- */
+  .head{position:absolute;top:262px;left:0;right:0;text-align:center;padding:0 90px;}
+  .head h1{
+    font-family:var(--serif);font-weight:500;font-size:118px;line-height:.96;
+    letter-spacing:-.5px;color:var(--dark-deep);
+  }
+  .head h1 em{font-style:italic;color:var(--red-dark);}
+  .head p{
+    margin-top:22px;font-family:var(--serif);font-style:italic;font-weight:400;
+    font-size:38px;line-height:1.3;color:var(--dark);opacity:.9;
+  }
+
+  /* ---- bottom offer ---- */
+  .bottom{position:absolute;left:0;right:0;bottom:84px;display:flex;flex-direction:column;align-items:center;gap:0;padding:0 96px;}
+  .offer{
+    width:100%;background:rgba(250,250,247,0.94);border:1px solid rgba(184,149,106,.5);
+    border-radius:4px;padding:40px 46px 42px;text-align:center;
+    box-shadow:0 30px 70px rgba(42,28,20,.28);backdrop-filter:blur(2px);
+  }
+  .offer__tag{
+    display:inline-block;font-weight:600;letter-spacing:.28em;font-size:15px;
+    text-transform:uppercase;color:var(--gold);margin-bottom:18px;
+  }
+  .offer__title{font-family:var(--serif);font-weight:600;font-size:50px;line-height:1.08;color:var(--dark-deep);}
+  .offer__title b{color:var(--red-dark);font-weight:600;}
+  .offer__sub{margin-top:14px;font-size:21px;line-height:1.5;color:var(--warm);font-weight:400;}
+  .offer__cta{
+    margin-top:30px;display:inline-flex;align-items:center;gap:14px;
+    background:var(--red-dark);color:#fff;font-weight:600;letter-spacing:.12em;
+    font-size:19px;text-transform:uppercase;padding:18px 40px;border-radius:2px;
+  }
+  .offer__cta span{font-weight:300;opacity:.7;}
+  .fine{margin-top:24px;font-size:15px;letter-spacing:.04em;color:rgba(250,250,247,.82);text-align:center;}
+</style>
+</head>
+<body>
+  <div class="card">
+    <img class="photo" src="../img/hero-mobile.jpg" alt="" />
+    <div class="wash"></div>
+    <div class="frame"></div>
+
+    <div class="top">
+      <div class="seal">
+        <div class="seal__mark">親</div>
+        <div class="seal__name">CUTIE CARE</div>
+      </div>
+      <div class="eyebrow">Mors dag · 31 maj</div>
+    </div>
+
+    <div class="head">
+      <h1>Skäm bort<br /><em>mamma</em></h1>
+      <p>en stund av lugn, värme<br />och omtanke — bara för henne</p>
+    </div>
+
+    <div class="bottom">
+      <div class="offer">
+        <div class="offer__tag">Mors dag · 31 maj</div>
+        <div class="offer__title">Ge mamma ett<br /><b>presentkort</b></div>
+        <div class="offer__sub">Skönhet, massage och en stund för henne själv — en present hon minns.</div>
+        <div class="offer__cta">cutiecare.se <span>·</span> Stockholm</div>
+      </div>
+      <div class="fine">Täby · Solna · Danderyd · Nacka Forum · Saltsjöbaden</div>
+    </div>
+  </div>
+</body>
+</html>
