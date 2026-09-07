@@ -1565,6 +1565,20 @@
   max-width: 460px;
 }
 
+.shop-teaser__b2b {
+  font-size: var(--fs-small, 0.9rem);
+  color: var(--color-warm-gray);
+  line-height: 1.7;
+  margin-top: 22px;
+  max-width: 460px;
+}
+
+.shop-teaser__b2b a {
+  color: var(--color-red);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .shop-bento {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
