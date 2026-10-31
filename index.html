@@ -163,11 +163,46 @@
         <span class="hero-promo__offer-price">G&auml;ller alla salonger hela oktober</span>
       </li>
     </ul>
-    <a href="https://app.cutiecare.se/" target="_blank" rel="noopener" class="hero-promo__link">
-      Boka tid &rarr;
-    </a>
+    <div class="hero-promo__links">
+      <a href="https://app.cutiecare.se/" target="_blank" rel="noopener" class="hero-promo__link">
+        Boka tid &rarr;
+      </a>
+      <a href="https://shop.cutiecare.se/product/presentkort/" target="_blank" rel="noopener" class="hero-promo__link">
+        K&ouml;p presentkort &rarr;
+      </a>
+    </div>
   </div>
 </section>
+
+<!-- ============================================================
+     3. PRESENTKORT BANNER (flyttad upp under heron, Dorina 31/10)
+     ============================================================ -->
+<section class="gift-card-banner" aria-labelledby="gift-heading">
+  <div class="container">
+
+    <div class="gift-card-mock" aria-hidden="true">
+      <div class="gift-card-mock__chip"></div>
+      <div>
+        <div class="gift-card-mock__brand">Cutie Care</div>
+        <div class="gift-card-mock__type">Presentkort</div>
+      </div>
+      <div class="gift-card-mock__amount">1 000 kr</div>
+    </div>
+
+    <div class="gift-card-banner__text reveal">
+      <span class="gift-card-banner__eyebrow">Ge bort avslappning</span>
+      <h2 id="gift-heading">Cutie Care <em>Presentkort</em></h2>
+      <p>Gäller i alla våra fyra salonger samt i webbutiken. En upplevelse som vårdar både kropp och själ.</p>
+      <div>
+        <a href="https://shop.cutiecare.se/product/presentkort/" class="btn btn--inverse btn--lg" target="_blank" rel="noopener">
+          Köp Presentkort <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 <!-- RECENSIONS-MARQUEE (riktiga 5-stjärniga omdömen ur bokningssystemet, 26/8) -->
 <section class="rev-marquee" aria-label="Vad våra gäster säger">
@@ -429,6 +464,12 @@
   .hero-promo__link:hover {
     opacity: .7;
   }
+  .hero-promo__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 14px 28px;
+  }
   .hero-promo__offers {
     list-style: none;
     margin: 4px 0 26px;
@@ -546,6 +587,9 @@
     }
     .hero-promo__title {
       font-size: 2rem;
+    }
+    .hero-promo__links {
+      justify-content: center;
     }
     .hero-promo__sub {
       font-size: .95rem;
@@ -1037,36 +1081,6 @@
       </div>
 
     </div>
-  </div>
-</section>
-
-
-<!-- ============================================================
-     11. PRESENTKORT BANNER
-     ============================================================ -->
-<section class="gift-card-banner" aria-labelledby="gift-heading">
-  <div class="container">
-
-    <div class="gift-card-mock" aria-hidden="true">
-      <div class="gift-card-mock__chip"></div>
-      <div>
-        <div class="gift-card-mock__brand">Cutie Care</div>
-        <div class="gift-card-mock__type">Presentkort</div>
-      </div>
-      <div class="gift-card-mock__amount">1 000 kr</div>
-    </div>
-
-    <div class="gift-card-banner__text reveal">
-      <span class="gift-card-banner__eyebrow">Ge bort avslappning</span>
-      <h2 id="gift-heading">Cutie Care <em>Presentkort</em></h2>
-      <p>Gäller i alla våra fyra salonger samt i webbutiken. En upplevelse som vårdar både kropp och själ.</p>
-      <div>
-        <a href="https://shop.cutiecare.se/product/presentkort/" class="btn btn--inverse btn--lg" target="_blank" rel="noopener">
-          Köp Presentkort <span class="arrow">→</span>
-        </a>
-      </div>
-    </div>
-
   </div>
 </section>
 
