@@ -60,10 +60,10 @@
     'transition:background-color .18s ease,border-color .18s ease,transform .16s cubic-bezier(.25,1,.5,1)}' +
     '.cc-fvp__btn:active{transform:scale(.97)}' +
     '.cc-fvp__btn:focus-visible{outline:3px solid var(--fvp-red);outline-offset:2px}' +
-    '.cc-fvp__btn--later{background:#fff;color:var(--fvp-ink);border:1px solid var(--fvp-line)}' +
-    '.cc-fvp__btn--later:hover{border-color:#cfc3c0;background:#FCFAF9}' +
-    '.cc-fvp__btn--buy{background:var(--fvp-red);color:#fff;border:1px solid var(--fvp-red)}' +
-    '.cc-fvp__btn--buy:hover{background:var(--fvp-red-dark);border-color:var(--fvp-red-dark);color:#fff}' +
+    '.cc-fvp .cc-fvp__btn--later{background:#fff;color:var(--fvp-ink);border:1px solid var(--fvp-line)}' +
+    '.cc-fvp .cc-fvp__btn--later:hover{border-color:#cfc3c0;background:#FCFAF9}' +
+    '.cc-fvp .cc-fvp__btn--buy{background:var(--fvp-red);color:#fff;border:1px solid var(--fvp-red)}' +
+    '.cc-fvp .cc-fvp__btn--buy:hover{background:var(--fvp-red-dark);border-color:var(--fvp-red-dark);color:#fff}' +
     '.cc-fvp--site{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--fvp-ink:#3D2B1F;--fvp-muted:#5E5049;--fvp-line:#E8DED6}' +
     '.cc-fvp--site .cc-fvp__title{font-family:"Cormorant Garamond",Georgia,serif;font-size:25px;font-weight:600;line-height:1.12;letter-spacing:-.005em}' +
     '.cc-fvp--site .cc-fvp__btn{border-radius:999px}' +
