@@ -1363,6 +1363,7 @@
 
 
 <script src="js/main.js" defer></script>
+<script src="/js/friskvard-paminnelse.js?v=20261114-1" data-variant="site" data-new-tab="1" defer></script>
 <script defer>
   // Services carousel — arrows + dots + smooth scroll
   document.addEventListener('DOMContentLoaded', function () {
@@ -1431,7 +1432,9 @@
 </script>
 <script>
   // Friskvård popup — visas efter 2 sek, stängs automatiskt efter 8 sek
+  // Står över så länge påminnelsen om friskvårdsbidraget gäller (t.o.m. 31/12 2026).
   setTimeout(function(){
+    if (window.ccFriskvardPaminnelseAktiv) return;
     var popup = document.getElementById('friskvardPopup');
     if(popup) {
       popup.classList.add('friskvard-popup--visible');
